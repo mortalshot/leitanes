@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="lv">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+		<link rel="preload" href="./assets/fonts/DMSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DMSans-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DMSans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DMSans-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/DMSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Par klīniku</title>
+		<script type="module" crossorigin="" src="./js/about.min.js?v=1775225622817"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1775225622817">
+		<link rel="stylesheet" crossorigin="" href="./css/about.min.css?v=1775225622817">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" class="header">
+				<div class="header__container">
+					<div class="header__brand brand">
+						<a href="index.html" class="brand__link" aria-label="Dr. Leitānes JK klīnika">
+							<span class="brand__logo">
+								<img src="./assets/img/logo.svg" alt="Dr. Leitānes JK klīnika" loading="eager">
+							</span>
+						</a>
+					</div>
+					<div class="header__menu menu">
+						<nav class="menu__body" aria-label="Main navigation">
+							<ul class="menu__list">
+								<li class="menu__item menu__item_has-services">
+									<a href="#" class="menu__services-toggle menu__link effect-bounce">
+										<span>Pakalpojumi</span>
+									</a>
+									<button type="button" class="menu__arrow" data-services-trigger="" aria-label="Open services submenu" aria-expanded="false" aria-controls="services-submenu">
+										<svg class="icon" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-select"></use>
+										</svg>
+									</button>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link effect-bounce">Speciālisti</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link effect-bounce">Īpašie piedāvājumi</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link effect-bounce">Cenas</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link effect-bounce">Kontakti</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<ul class="header__languages languages" aria-label="Language switcher">
+							<li class="languages__item">
+								<a href="#" class="languages__link effect-bounce _active" aria-current="page">Lv</a>
+							</li>
+							<li class="languages__item">
+								<a href="#" class="languages__link effect-bounce">En</a>
+							</li>
+							<li class="languages__item">
+								<a href="#" class="languages__link effect-bounce">Ru</a>
+							</li>
+						</ul>
+						<div class="header__search search">
+							<button type="button" class="search__toggle" aria-label="Open search">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-search"></use>
+								</svg>
+							</button>
+						</div>
+						<button type="button" data-fls-menu="" class="header__burger" aria-label="Open menu">
+							<span></span>
+						</button>
+					</div>
+				</div>
+				<div hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
+					<div class="services-submenu__container">
+						<div class="services-submenu__grid">
+							<div class="services-submenu__column">
+								<h5 class="services-submenu__title">
+									<a href="#">Dermatoloģija</a>
+								</h5>
+								<ul class="services-submenu__list">
+									<li>
+										<a href="#">Veidojumu noņemšana</a>
+									</li>
+									<li>
+										<a href="#">Ādas slimību ārstēšana</a>
+									</li>
+									<li>
+										<a href="#">Ādas stāvokļa diagnostika</a>
+									</li>
+								</ul>
+							</div>
+							<div class="services-submenu__column">
+								<h5 class="services-submenu__title">
+									<a href="#">Estētiskā medicīna</a>
+								</h5>
+								<ul class="services-submenu__list">
+									<li>
+										<a href="#">Filleru injekcijas</a>
+									</li>
+									<li>
+										<a href="#">Botulīna toksīna injekcijas</a>
+									</li>
+									<li>
+										<a href="#">Lāzerprocedūras</a>
+									</li>
+									<li>
+										<a href="#">Atjaunojošās un anti-age procedūras</a>
+									</li>
+									<li>
+										<a href="#">Podoloģija</a>
+									</li>
+									<li>
+										<a href="#">Aparātprocedūras</a>
+									</li>
+								</ul>
+							</div>
+							<div class="services-submenu__column">
+								<h5 class="services-submenu__title">
+									<a href="#">Kosmetoloģija</a>
+								</h5>
+								<ul class="services-submenu__list">
+									<li>
+										<a href="#">Sejas tīrīšana</a>
+									</li>
+									<li>
+										<a href="#">Pīlingi</a>
+									</li>
+									<li>
+										<a href="#">Lāzerepilācija</a>
+									</li>
+									<li>
+										<a href="#">Biorevitalizācija</a>
+									</li>
+									<li>
+										<a href="#">Sejas kopšana</a>
+									</li>
+									<li>
+										<a href="#">Ķermeņa procedūras</a>
+									</li>
+									<li>
+										<a href="#">IPL fotoatjaunošana</a>
+									</li>
+								</ul>
+							</div>
+							<div class="services-submenu__column">
+								<h5 class="services-submenu__title">
+									<a href="#">Ginekoloģija</a>
+								</h5>
+								<ul class="services-submenu__list">
+									<li>
+										<a href="#">Ginekologa konsultācija</a>
+									</li>
+									<li>
+										<a href="#">Ginekoloģiskā 3D ultrasonogrāfija</a>
+									</li>
+									<li>
+										<a href="#">Krūšu dziedzeru USG izmeklēšana</a>
+									</li>
+									<li>
+										<a href="#">Grūtnieces uzraudzība</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 5</a>
+									</li>
+								</ul>
+							</div>
+							<div class="services-submenu__column">
+								<h5 class="services-submenu__title">
+									<a href="#">Podoloģija</a>
+								</h5>
+								<ul class="services-submenu__list">
+									<li>
+										<a href="#">Apakšsadaļa 1</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 2</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 3</a>
+									</li>
+								</ul>
+							</div>
+							<div class="services-submenu__column">
+								<h5 class="services-submenu__title">
+									<a href="#">Endokrinoloģija</a>
+								</h5>
+								<ul class="services-submenu__list">
+									<li>
+										<a href="#">Vairogdziedzera USG</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 2</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 3</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 4</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 5</a>
+									</li>
+									<li>
+										<a href="#">Apakšsadaļa 6</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<form action="#" class="services-submenu__search" role="search">
+							<label class="services-submenu__field">
+								<span class="sr-only">Search services</span>
+								<input type="text" class="input services-submenu__input" name="services-search" placeholder="Ievadiet, ko vēlaties atrast" autocomplete="off">
+							</label>
+							<button type="submit" class="services-submenu__submit" aria-label="Search services">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel" aria-label="Site search">
+					<div class="search-panel__container">
+						<form action="#" class="search-panel__form" role="search">
+							<label class="search-panel__field">
+								<span class="sr-only">Search</span>
+								<input data-fls-input="" type="text" name="search" class="input search-panel__input" placeholder="Ievadiet, ko vēlaties atrast" autocomplete="off">
+							</label>
+							<button type="submit" class="search-panel__submit" aria-label="Submit search">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-search"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+				<div class="header__overlay"></div>
+				<div hidden data-fls-init-hidden="" class="header__panel panel-header" aria-label="Mobile menu">
+					<div class="panel-header__inner">
+						<div class="panel-header__top">
+							<ul class="panel-header__languages languages" aria-label="Language switcher">
+								<li class="languages__item">
+									<a href="#" class="languages__link effect-bounce _active" aria-current="page">Lv</a>
+								</li>
+								<li class="languages__item">
+									<a href="#" class="languages__link effect-bounce">En</a>
+								</li>
+								<li class="languages__item">
+									<a href="#" class="languages__link effect-bounce">Ru</a>
+								</li>
+							</ul>
+							<button type="button" data-fls-menu="" class="panel-header__close header__burger icon-menu _active" aria-label="Close menu">
+								<span></span>
+							</button>
+						</div>
+						<nav class="panel-header__nav" aria-label="Mobile navigation">
+							<ul class="panel-header__list">
+								<li class="panel-header__item">
+									<a href="#" class="panel-header__link effect-bounce">Pakalpojumi</a>
+								</li>
+								<li class="panel-header__item">
+									<a href="#" class="panel-header__link effect-bounce">Par mums</a>
+								</li>
+								<li class="panel-header__item">
+									<a href="#" class="panel-header__link effect-bounce">Īpašie piedāvājumi</a>
+								</li>
+								<li class="panel-header__item">
+									<a href="#" class="panel-header__link effect-bounce">Informācija pacientiem</a>
+								</li>
+								<li class="panel-header__item">
+									<a href="#" class="panel-header__link effect-bounce">Cenas</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="panel-header__info">
+							<div class="panel-header__block info-block info-block_location">
+								<div class="panel-header__heading info-block__heading">
+									<svg class="icon" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-location"></use>
+									</svg>
+									<p class="info-block__title">Katrīnas iela 9, Rīga, LV-1045</p>
+								</div>
+								<div class="info-block__body">
+									<a href="#" class="panel-header__caption info-block__caption">Skatīt kartē un saņemt norādes</a>
+								</div>
+							</div>
+							<div class="panel-header__block info-block info-block_schedule">
+								<div class="panel-header__heading info-block__heading">
+									<svg class="icon" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-schedule"></use>
+									</svg>
+									<p class="info-block__title">Darba laiks</p>
+								</div>
+								<div class="info-block__body">
+									<ul class="panel-header__schedule info-block__list">
+										<li>Pr. - Pk.: 09:00 - 20:00</li>
+										<li>Sestdien.: 09:00 - 17:00</li>
+										<li>Svētdien.: Brīvs</li>
+									</ul>
+								</div>
+							</div>
+							<div class="panel-header__contacts contact-list">
+								<div class="panel-header__contact contact-list__item">
+									<span class="panel-header__label contact-list__label">Tālrunis</span>
+									<a href="tel:+37120750750" class="panel-header__value contact-list__value">+371 20 750 750</a>
+								</div>
+								<div class="panel-header__contact contact-list__item">
+									<span class="panel-header__label contact-list__label">E-pasts</span>
+									<a href="mailto:info@jusudomens.lv" class="panel-header__value contact-list__value">info@jusudomens.lv</a>
+								</div>
+							</div>
+							<button type="button" class="panel-header__button btn btn_border-grey" data-fls-button="" aria-label="Book an appointment">
+								<span>Pieteikt vizīti</span>
+								<svg class="icon icon_chevron" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+								</svg>
+							</button>
+							<ul class="panel-header__socials socials-list" aria-label="Social media">
+								<li>
+									<a href="#" class="socials-list__link" aria-label="YouTube">
+										<svg class="icon" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-youtube"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="socials-list__link" aria-label="Facebook">
+										<svg class="icon" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="socials-list__link" aria-label="Instagram">
+										<svg class="icon" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-instagram"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="socials-list__link" aria-label="TikTok">
+										<svg class="icon" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-tiktok"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page page--about">
+				<div class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
+					<div class="page-heading__container">
+						<div class="page-heading__main">
+							<h1 id="page-heading-title" class="page-heading__title">Par klīniku</h1>
+							<a href="index.html" class="page-heading__back">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+								</svg>
+								<span>Uz sākumlapu</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<section class="text-media" data-fls-textmedia="" aria-labelledby="text-media-title">
+					<div class="text-media__container">
+						<h2 id="text-media-title" class="sr-only">Par klīniku</h2>
+						<div class="text-media__body">
+							<div class="text-media__content">
+								<div class="text-media__text">
+									<h4>
+										Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse.
+									</h4>
+									<p>
+										Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione voluptatem sequi nesciunt.
+									</p>
+									<p>
+										Mūsu misija: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+									</p>
+								</div>
+								<div class="text-media__actions">
+									<a href="#" class="text-media__button btn btn_small btn_border-grey">
+										<span>Mūsu speciālisti</span>
+										<svg class="icon icon_chevron" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+										</svg>
+									</a>
+									<a href="#" class="text-media__button btn btn_small btn_border-grey">
+										<span>Vakances</span>
+										<svg class="icon icon_chevron" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="text-media__media">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/text-media/media1-600.webp" type="image/webp">
+									<img alt="Dr. Leitānes JK klīnika interjers" src="./assets/img/text-media/media1.webp">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="advantages" data-fls-advantages="" aria-labelledby="advantages-title">
+					<div class="advantages__ornaments">
+						<span></span>
+					</div>
+					<div class="advantages__container">
+						<h2 id="advantages-title" class="sr-only">Advantages</h2>
+						<div class="advantages__items">
+							<div class="advantages__item advantage-item">
+								<div class="advantage-item__icon">
+									<img src="./assets/img/advantages/adv-item1.svg" alt="" aria-hidden="true">
+								</div>
+								<h5 class="advantage-item__title">15 gadu pieredze un klientu uzticība</h5>
+							</div>
+							<div class="advantages__item advantage-item">
+								<div class="advantage-item__icon">
+									<img src="./assets/img/advantages/adv-item2.svg" alt="" aria-hidden="true">
+								</div>
+								<h5 class="advantage-item__title">Augsti kvalificēti speciālisti</h5>
+							</div>
+							<div class="advantages__item advantage-item">
+								<div class="advantage-item__icon">
+									<img src="./assets/img/advantages/adv-item3.svg" alt="" aria-hidden="true">
+								</div>
+								<h5 class="advantage-item__title">Mūsdienīgas iekārtas un tehnoloģijas</h5>
+							</div>
+							<div class="advantages__item advantage-item">
+								<div class="advantage-item__icon">
+									<img src="./assets/img/advantages/adv-item4.svg" alt="" aria-hidden="true">
+								</div>
+								<h5 class="advantage-item__title">Drošas un sertificētas procedūras</h5>
+							</div>
+							<div class="advantages__item advantage-item">
+								<div class="advantage-item__icon">
+									<img src="./assets/img/advantages/adv-item5.svg" alt="" aria-hidden="true">
+								</div>
+								<h5 class="advantage-item__title">Dabiski un noturīgi rezultāti</h5>
+							</div>
+							<div class="advantages__item advantage-item">
+								<div class="advantage-item__icon">
+									<img src="./assets/img/advantages/adv-item6.svg" alt="" aria-hidden="true">
+								</div>
+								<h5 class="advantage-item__title">Individuāla pieeja katram pacientam</h5>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="photogallery" data-fls-photogallery="" aria-labelledby="photogallery-title">
+					<div class="photogallery__panel">
+						<div class="photogallery__container">
+							<h2 id="photogallery-title" class="photogallery__title">Fotogalerija</h2>
+							<div class="photogallery__filters-wrap">
+								<button type="button" class="photogallery__filters-toggle btn btn_small" aria-expanded="false" aria-controls="photogallery-filters-list">
+									<span class="photogallery__filters-toggle-label">Visas bildes</span>
+									<svg class="icon" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+									</svg>
+								</button>
+								<div id="photogallery-filters-list" class="photogallery__filters" aria-label="Photogallery filter" data-fls-button="">
+									<button type="button" class="photogallery__filter btn btn_small _active" data-filter="all">Visas bildes</button>
+									<button type="button" class="photogallery__filter btn btn_small" data-filter="clinic">Klīnikas telpas</button>
+									<button type="button" class="photogallery__filter btn btn_small" data-filter="equipment">Aprīkojums</button>
+									<button type="button" class="photogallery__filter btn btn_small" data-filter="equipment-2">Aprīkojums 2</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="photogallery__navigation">
+						<div class="photogallery__container">
+							<button type="button" class="photogallery__arrow photogallery__arrow_prev slider-arrow slider-arrow_prev" aria-label="Previous photo">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
+								</svg>
+							</button>
+							<button type="button" class="photogallery__arrow photogallery__arrow_next slider-arrow slider-arrow_next" aria-label="Next photo">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="photogallery__main swiper">
+						<div class="photogallery__main-wrapper swiper-wrapper"></div>
+					</div>
+					<div class="photogallery__thumbs swiper">
+						<div class="photogallery__thumbs-wrapper swiper-wrapper"></div>
+					</div>
+					<div class="photogallery__source" hidden>
+						<div class="photogallery__source-item" data-category="clinic" data-full="./assets/img/gallery/clinic1.webp" data-preview="./assets/img/gallery/clinic1.webp" data-thumb="./assets/img/gallery/clinic1.webp" data-alt="Klīnikas telpas 1"></div>
+						<div class="photogallery__source-item" data-category="clinic" data-full="./assets/img/gallery/clinic2.webp" data-preview="./assets/img/gallery/clinic2.webp" data-thumb="./assets/img/gallery/clinic2.webp" data-alt="Klīnikas telpas 2"></div>
+						<div class="photogallery__source-item" data-category="clinic" data-full="./assets/img/gallery/clinic3.webp" data-preview="./assets/img/gallery/clinic3.webp" data-thumb="./assets/img/gallery/clinic3.webp" data-alt="Klīnikas telpas 3"></div>
+						<div class="photogallery__source-item" data-category="clinic" data-full="./assets/img/gallery/clinic4.webp" data-preview="./assets/img/gallery/clinic4.webp" data-thumb="./assets/img/gallery/clinic4.webp" data-alt="Klīnikas telpas 4"></div>
+						<div class="photogallery__source-item" data-category="equipment" data-full="./assets/img/gallery/gallery1@2x.webp" data-preview="./assets/img/gallery/gallery1@2x.webp" data-thumb="./assets/img/gallery/gallery1.webp" data-alt="Aprīkojums 1"></div>
+						<div class="photogallery__source-item" data-category="equipment" data-full="./assets/img/gallery/gallery2@2x.webp" data-preview="./assets/img/gallery/gallery2@2x.webp" data-thumb="./assets/img/gallery/gallery2.webp" data-alt="Aprīkojums 2"></div>
+						<div class="photogallery__source-item" data-category="equipment" data-full="./assets/img/gallery/gallery3@2x.webp" data-preview="./assets/img/gallery/gallery3@2x.webp" data-thumb="./assets/img/gallery/gallery3.webp" data-alt="Aprīkojums 3"></div>
+						<div class="photogallery__source-item" data-category="equipment-2" data-full="./assets/img/gallery/gallery4@2x.webp" data-preview="./assets/img/gallery/gallery4@2x.webp" data-thumb="./assets/img/gallery/gallery4.webp" data-alt="Aprīkojums 4"></div>
+						<div class="photogallery__source-item" data-category="equipment-2" data-full="./assets/img/gallery/gallery5@2x.webp" data-preview="./assets/img/gallery/gallery5@2x.webp" data-thumb="./assets/img/gallery/gallery5.webp" data-alt="Aprīkojums 5"></div>
+					</div>
+				</section>
+				<section class="widget-specialists" data-fls-wdgspecialists="" aria-labelledby="wdgspecialists-title" style="background-color: #F7F7F7;">
+					<div class="widget-specialists__container">
+						<div class="widget-specialists__head _heading">
+							<h2 id="wdgspecialists-title" class="widget-specialists__title">Mūsu speciālisti</h2>
+							<a href="single-specialist.html" class="widget-specialists__button btn btn_small btn_border-grey" data-fls-button="" aria-label="View all specialists" data-fls-dynamic=".widget-specialists__navigation, 767.98">
+								<span>Visi speciālisti</span>
+								<svg class="icon icon_chevron" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+								</svg>
+							</a>
+						</div>
+						<div data-fls-slider="specialists" class="widget-specialists__slider swiper">
+							<div class="widget-specialists__wrapper swiper-wrapper">
+								<article class="widget-specialists__slide swiper-slide specialist-card">
+									<a href="single-specialist.html" class="specialist-card__image">
+										<img data-fls-lazy="./assets/img/specialists/specialist1.webp" alt="Dr. Olga Leitāne">
+									</a>
+									<div class="specialist-card__content">
+										<h3 class="specialist-card__name">
+											<a href="single-specialist.html">Dr. Olga Leitāne</a>
+										</h3>
+										<div class="specialist-card__meta">
+											<p>Ārste, dermatoloģe, veneroloģe</p>
+											<p>Ā.p.id. 10000046147</p>
+										</div>
+										<a href="single-specialist.html" class="specialist-card__more link-more">Sīkāk</a>
+									</div>
+								</article>
+								<article class="widget-specialists__slide swiper-slide specialist-card">
+									<a href="single-specialist.html" class="specialist-card__image">
+										<img data-fls-lazy="./assets/img/specialists/specialist2.webp" alt="Marija Stepanova">
+									</a>
+									<div class="specialist-card__content">
+										<h3 class="specialist-card__name">
+											<a href="single-specialist.html">Marija Stepanova</a>
+										</h3>
+										<div class="specialist-card__meta">
+											<p>Kosmētiķe, medicīnas māsa</p>
+											<p>Ā.p.id. 10000046147</p>
+										</div>
+										<a href="single-specialist.html" class="specialist-card__more link-more">Sīkāk</a>
+									</div>
+								</article>
+								<article class="widget-specialists__slide swiper-slide specialist-card">
+									<a href="single-specialist.html" class="specialist-card__image">
+										<img data-fls-lazy="./assets/img/specialists/specialist3.webp" alt="Tamara Sturua">
+									</a>
+									<div class="specialist-card__content">
+										<h3 class="specialist-card__name">
+											<a href="single-specialist.html">Tamara Sturua</a>
+										</h3>
+										<div class="specialist-card__meta">
+											<p>Masiere SPA speciāliste</p>
+											<p>Ā.p.id. 10000046147</p>
+										</div>
+										<a href="single-specialist.html" class="specialist-card__more link-more">Sīkāk</a>
+									</div>
+								</article>
+								<article class="widget-specialists__slide swiper-slide specialist-card">
+									<a href="single-specialist.html" class="specialist-card__image">
+										<img data-fls-lazy="./assets/img/specialists/specialist4.webp" alt="Aleksandra Mamonova">
+									</a>
+									<div class="specialist-card__content">
+										<h3 class="specialist-card__name">
+											<a href="single-specialist.html">Aleksandra Mamonova</a>
+										</h3>
+										<div class="specialist-card__meta">
+											<p>Kosmētiķe</p>
+											<p>Ā.p.id. 10000046147</p>
+										</div>
+										<a href="single-specialist.html" class="specialist-card__more link-more">Sīkāk</a>
+									</div>
+								</article>
+								<article class="widget-specialists__slide swiper-slide specialist-card">
+									<a href="single-specialist.html" class="specialist-card__image">
+										<img data-fls-lazy="./assets/img/specialists/specialist5.webp" alt="Svetlana Jurisova">
+									</a>
+									<div class="specialist-card__content">
+										<h3 class="specialist-card__name">
+											<a href="single-specialist.html">Svetlana Jurisova</a>
+										</h3>
+										<div class="specialist-card__meta">
+											<p>Masiere SPA speciāliste</p>
+											<p>Ā.p.id. 10000046147</p>
+										</div>
+										<a href="single-specialist.html" class="specialist-card__more link-more">Sīkāk</a>
+									</div>
+								</article>
+								<article class="widget-specialists__slide swiper-slide specialist-card">
+									<a href="single-specialist.html" class="specialist-card__image">
+										<img data-fls-lazy="./assets/img/specialists/specialist6.webp" alt="Specialist 6">
+									</a>
+									<div class="specialist-card__content">
+										<h3 class="specialist-card__name">
+											<a href="single-specialist.html">Specialist 6</a>
+										</h3>
+										<div class="specialist-card__meta">
+											<p>Speciālists</p>
+											<p>Ā.p.id. 10000046147</p>
+										</div>
+										<a href="single-specialist.html" class="specialist-card__more link-more">Sīkāk</a>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="widget-specialists__navigation" aria-label="Specialists slider controls">
+							<button type="button" class="widget-specialists__arrow slider-arrow slider-arrow_prev" aria-label="Previous specialists">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
+								</svg>
+							</button>
+							<button type="button" class="widget-specialists__arrow slider-arrow slider-arrow_next" aria-label="Next specialists">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section class="widget-partners" data-fls-wdgpartners="" aria-labelledby="partners-title">
+					<div class="widget-partners__container">
+						<div class="widget-partners__head _heading">
+							<h2 id="partners-title" class="widget-partners__title">Sadarbības partneri</h2>
+							<div class="widget-partners__navigation" aria-label="Partners slider controls">
+								<button type="button" class="widget-partners__arrow slider-arrow slider-arrow_prev" aria-label="Previous partners">
+									<svg class="icon" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
+									</svg>
+								</button>
+								<button type="button" class="widget-partners__arrow slider-arrow slider-arrow_next" aria-label="Next partners">
+									<svg class="icon" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div data-fls-slider="partners" class="widget-partners__slider swiper">
+							<div class="widget-partners__wrapper swiper-wrapper">
+								<div class="widget-partners__slide swiper-slide">
+									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 1">
+										<img data-fls-lazy="./assets/img/partners/partners1.webp" alt="Partner logo 1">
+									</a>
+								</div>
+								<div class="widget-partners__slide swiper-slide">
+									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 2">
+										<img data-fls-lazy="./assets/img/partners/partners2.webp" alt="Partner logo 2">
+									</a>
+								</div>
+								<div class="widget-partners__slide swiper-slide">
+									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 3">
+										<img data-fls-lazy="./assets/img/partners/partners3.webp" alt="Partner logo 3">
+									</a>
+								</div>
+								<div class="widget-partners__slide swiper-slide">
+									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 4">
+										<img data-fls-lazy="./assets/img/partners/partners4.webp" alt="Partner logo 4">
+									</a>
+								</div>
+								<div class="widget-partners__slide swiper-slide">
+									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 5">
+										<img data-fls-lazy="./assets/img/partners/partners5.webp" alt="Partner logo 5">
+									</a>
+								</div>
+								<div class="widget-partners__slide swiper-slide">
+									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 6">
+										<img data-fls-lazy="./assets/img/partners/partners6.webp" alt="Partner logo 6">
+									</a>
+								</div>
+								<div class="widget-partners__slide swiper-slide">
+									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 7">
+										<img data-fls-lazy="./assets/img/partners/partners1.webp" alt="Partner logo 7">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<div class="footer__top">
+						<nav data-fls-spollers="574.98, max" class="footer__nav footer-nav" aria-label="Footer navigation">
+							<details class="footer-nav__column">
+								<summary class="footer-nav__title">Mūsu virzieni</summary>
+								<ul class="footer-nav__list">
+									<li>
+										<a href="#">Estētiskā medicīna</a>
+									</li>
+									<li>
+										<a href="#">Dermatoloģija</a>
+									</li>
+									<li>
+										<a href="#">Kosmetoloģija</a>
+									</li>
+									<li>
+										<a href="#">Ginekoloģija</a>
+									</li>
+									<li>
+										<a href="#">Podoloģija</a>
+									</li>
+									<li>
+										<a href="#">Endokrinoloģijatton</a>
+									</li>
+								</ul>
+							</details>
+							<details class="footer-nav__column">
+								<summary class="footer-nav__title">Par mums</summary>
+								<ul class="footer-nav__list">
+									<li>
+										<a href="#">Par mums</a>
+									</li>
+									<li>
+										<a href="#">Speciālisti</a>
+									</li>
+									<li>
+										<a href="#">Raksti</a>
+									</li>
+									<li>
+										<a href="#">Vakances</a>
+									</li>
+									<li>
+										<a href="#">Kontakti</a>
+									</li>
+								</ul>
+							</details>
+							<details class="footer-nav__column">
+								<summary class="footer-nav__title">Pacientiem</summary>
+								<ul class="footer-nav__list">
+									<li>
+										<a href="#">Cenas</a>
+									</li>
+									<li>
+										<a href="#">Īpašie piedāvājumi</a>
+									</li>
+									<li>
+										<a href="#">Apdrošināšana</a>
+									</li>
+									<li>
+										<a href="#">Privātuma politika</a>
+									</li>
+									<li>
+										<a href="#">Noteikumi</a>
+									</li>
+								</ul>
+							</details>
+						</nav>
+						<div class="footer__info">
+							<div class="footer__details">
+								<h5 class="footer__title">Kontakti un darba laiks</h5>
+								<div class="footer__blocks">
+									<div class="footer__block info-block info-block_location">
+										<div class="footer__heading info-block__heading">
+											<svg class="icon" aria-hidden="true">
+												<use href="./assets/img/spritemap.svg#sprite-location"></use>
+											</svg>
+											<p class="info-block__title">Katrīnas iela 9, Riga, LV-1045</p>
+										</div>
+										<div class="info-block__body">
+											<a href="#" class="footer__caption info-block__caption">Skatīt kartē un saņemt norādes</a>
+										</div>
+									</div>
+									<div class="footer__block info-block info-block_schedule">
+										<div class="footer__heading info-block__heading">
+											<svg class="icon" aria-hidden="true">
+												<use href="./assets/img/spritemap.svg#sprite-schedule"></use>
+											</svg>
+											<p class="info-block__title">Darba laiks</p>
+										</div>
+										<div class="info-block__body">
+											<ul class="footer__schedule info-block__list">
+												<li>Pr. - Pk.: 09:00 - 20:00</li>
+												<li>Sestdien.: 09:00 - 17:00</li>
+												<li>Svētdien.: Brīvs</li>
+											</ul>
+										</div>
+									</div>
+									<div class="footer__accessibility">
+										<svg class="icon" aria-hidden="true">
+											<use href="./assets/img/spritemap.svg#sprite-accessibility"></use>
+										</svg>
+										<p>Klīnika pieejama cilvēkiem ar kustību traucējumiem</p>
+									</div>
+								</div>
+							</div>
+							<div class="footer__contacts-wrap">
+								<ul class="footer__socials socials-list" aria-label="Social media">
+									<li>
+										<a href="#" class="socials-list__link" aria-label="YouTube">
+											<svg class="icon" aria-hidden="true">
+												<use href="./assets/img/spritemap.svg#sprite-youtube"></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="socials-list__link" aria-label="Facebook">
+											<svg class="icon" aria-hidden="true">
+												<use href="./assets/img/spritemap.svg#sprite-facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="socials-list__link" aria-label="Instagram">
+											<svg class="icon" aria-hidden="true">
+												<use href="./assets/img/spritemap.svg#sprite-instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="socials-list__link" aria-label="TikTok">
+											<svg class="icon" aria-hidden="true">
+												<use href="./assets/img/spritemap.svg#sprite-tiktok"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+								<div class="footer__contacts contact-list">
+									<div class="footer__contact contact-list__item">
+										<span class="footer__label contact-list__label">Tālrunis</span>
+										<a href="tel:+37120750750" class="footer__value contact-list__value">+371 20 750 750</a>
+									</div>
+									<div class="footer__contact contact-list__item">
+										<span class="footer__label contact-list__label">E-pasts</span>
+										<a href="mailto:info@jusudomens.lv" class="footer__value contact-list__value">info@jusudomens.lv</a>
+									</div>
+								</div>
+								<button type="button" class="footer__button btn btn_fill-grey" data-fls-button="" aria-label="Book an appointment">
+									<span>Pieteikt vizīti</span>
+									<svg class="icon icon_chevron" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="footer__meta">
+							<p class="footer__copy">2025 SIA JUSKOS 2025</p>
+							<p class="footer__code">Ārstniecības iestādes kods: 001000205</p>
+						</div>
+						<a href="#" class="footer__credit" aria-label="Developer">
+							<span>Izstrāde:</span>
+							<img data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<ul id="fls-dev-panel">
+			<li>
+				<a href="index.html">index</a>
+			</li>
+			<li>
+				<a href="about.html">about</a>
+			</li>
+		</ul>
+		<style>
+			#fls-dev-panel{
+				position: fixed;
+				left: 10px;
+				padding: 15px 25px 15px 15px;
+				border-radius: 0 10px 10px 0;
+				top: 10%;
+				color: #ffffff;
+				background-color: rgba(51, 51, 51, 0.5);
+				transform: translate(-100%, 0px);
+				max-height: 80svh;
+				overflow: auto;
+				transition: all 300ms;
+				z-index: 9999;
+				font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			}
+			#fls-dev-panel li{
+				list-style:none;
+			}
+			#fls-dev-panel hr{
+				border-bottom: 1px solid;
+			}
+			#fls-dev-panel:hover{
+				left: 0px;
+				transform: translate(0, 0);
+			}
+			#fls-dev-panel a{
+				text-decoration: none;
+				color: inherit;
+			}
+			#fls-dev-panel a:hover {
+				text-decoration: underline;
+			}
+			#fls-dev-panel li:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		</style>
+	</body>
+</html>
