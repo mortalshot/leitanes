@@ -1021,7 +1021,7 @@ video {
   position: fixed;
   width: 100%;
   z-index: 170;
-  right: max(0rem, (100vw - 120rem) / 2);
+  right: 0;
   top: 0;
   translate: 100% 0;
   opacity: 0;
