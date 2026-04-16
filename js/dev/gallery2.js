@@ -1,4 +1,5 @@
-import { l as lightGallery, b as bodyLockStatus, a as bodyLock, c as bodyUnlock } from "./app.min.js";
+import { l as lightGallery } from "./gallery.min.js";
+import { b as bodyLockStatus, a as bodyLock, c as bodyUnlock } from "./app.min.js";
 const KEY = "7EC452A9-0CFD441C-BD984C7C-17C8456E";
 let galleryOwnsLock = false;
 function initGallery() {

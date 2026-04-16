@@ -1,0 +1,1 @@
+.widget-blog{background-color:#f7f7f7}.widget-blog__button.btn_border-grey{background-color:transparent}.widget-blog__grid{align-items:flex-start;display:grid;gap:2rem}@media (max-width:47.99875em){.widget-blog__button{margin-top:1.5rem}}@media (min-width:47.99875em){.widget-blog__grid{grid-template-columns:repeat(2,1fr)}}
