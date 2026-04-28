@@ -11,11 +11,11 @@
 		<link rel="preload" href="./assets/fonts/DMSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Cenas</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1776351960101"></script>
-		<script type="module" crossorigin="" src="./js/navpage.min.js?v=1776351960101"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1776351960101">
-		<link rel="stylesheet" crossorigin="" href="./css/navpage.min.css?v=1776351960101">
-		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1776351960101">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1777377128373"></script>
+		<script type="module" crossorigin="" src="./js/navpage.min.js?v=1777377128373"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1777377128373">
+		<link rel="stylesheet" crossorigin="" href="./css/navpage.min.css?v=1777377128373">
+		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1777377128373">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -80,7 +80,7 @@
 						</button>
 					</div>
 				</div>
-				<div hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
+				<nav hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
 					<div class="services-submenu__container">
 						<div class="services-submenu__grid">
 							<div class="services-submenu__column">
@@ -228,8 +228,8 @@
 							</button>
 						</form>
 					</div>
-				</div>
-				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel" aria-label="Site search">
+				</nav>
+				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel">
 					<div class="search-panel__container">
 						<form action="#" class="search-panel__form" role="search">
 							<label class="search-panel__field">
@@ -245,7 +245,7 @@
 					</div>
 				</div>
 				<div class="header__overlay"></div>
-				<div hidden data-fls-init-hidden="" class="header__panel panel-header" aria-label="Mobile menu">
+				<div hidden data-fls-init-hidden="" class="header__panel panel-header">
 					<div class="panel-header__inner">
 						<div class="panel-header__top">
 							<ul class="panel-header__languages languages" aria-label="Language switcher">
@@ -360,7 +360,7 @@
 				</div>
 			</header>
 			<main class="page">
-				<div class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
+				<section class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
 					<div class="page-heading__container">
 						<div class="page-heading__main">
 							<h1 id="page-heading-title" class="page-heading__title">Cenas</h1>
@@ -378,7 +378,7 @@
 								</p>
 							</div>
 							<div class="page-heading__actions">
-								<a href="tel:+371 20 750 750" class="page-heading__phone title-h5">
+								<a href="tel:+37120750750" class="page-heading__phone title-h5">
 									<svg class="icon" aria-hidden="true">
 										<use href="./assets/img/spritemap.svg#sprite-phone"></use>
 									</svg>
@@ -393,7 +393,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 				<section class="nav-page" data-fls-navpage="" aria-labelledby="nav-page-title">
 					<div class="nav-page__container">
 						<h2 id="nav-page-title" class="sr-only">Lapas navigācija</h2>
@@ -437,7 +437,7 @@
 										<thead class="table-price__head">
 											<tr class="table-price__row table-price__row_head">
 												<th scope="col" class="table-price__label table-price__label_service">Pakalpojums</th>
-												<th scope="col" class="table-price__label table-price__label_value" width="24%">Cena, €</th>
+												<th scope="col" class="table-price__label table-price__label_value" style="width: 24%;">Cena, €</th>
 											</tr>
 										</thead>
 										<tbody class="table-price__body">
@@ -553,7 +553,7 @@
 										<thead class="table-price__head">
 											<tr class="table-price__row table-price__row_head">
 												<th scope="col" class="table-price__label table-price__label_service">Pakalpojums</th>
-												<th scope="col" class="table-price__label table-price__label_value" width="24%">Cena, €</th>
+												<th scope="col" class="table-price__label table-price__label_value" style="width: 24%;">Cena, €</th>
 											</tr>
 										</thead>
 										<tbody class="table-price__body">
@@ -667,7 +667,7 @@
 										<thead class="table-price__head">
 											<tr class="table-price__row table-price__row_head">
 												<th scope="col" class="table-price__label table-price__label_service">Pakalpojums</th>
-												<th scope="col" class="table-price__label table-price__label_value" width="24%">Cena, €</th>
+												<th scope="col" class="table-price__label table-price__label_value" style="width: 24%;">Cena, €</th>
 											</tr>
 										</thead>
 										<tbody class="table-price__body">
@@ -823,7 +823,7 @@
 						</nav>
 						<div class="footer__info">
 							<div class="footer__details">
-								<h5 class="footer__title">Kontakti un darba laiks</h5>
+								<h3 class="footer__title">Kontakti un darba laiks</h3>
 								<div class="footer__blocks">
 									<div class="footer__block info-block info-block_location">
 										<div class="footer__heading info-block__heading">
@@ -916,7 +916,7 @@
 						</div>
 						<a href="#" class="footer__credit" aria-label="Developer">
 							<span>Izstrāde:</span>
-							<img data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
+							<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
 						</a>
 					</div>
 				</div>
@@ -929,7 +929,7 @@
 				</svg>
 			</button>
 		</div>
-		<div data-fls-popup="appointment" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
+		<div data-fls-popup="appointment" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
 			<div data-fls-popup-wrapper="" class="popup__wrapper">
 				<div data-fls-popup-body="" class="popup__body">
 					<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Aizvērt modālo logu"></button>

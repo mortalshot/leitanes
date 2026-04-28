@@ -116,6 +116,9 @@
   .advantages__items {
     column-gap: 2rem;
   }
+  .advantage-item__title {
+    font-size: 1.25rem;
+  }
 }
 @media (min-width: 64em) and (max-width: 120em) {
   .widget-partners__navigation {

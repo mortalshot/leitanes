@@ -11,10 +11,10 @@
 		<link rel="preload" href="./assets/fonts/DMSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Contacts</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1776351960101"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1776351960101">
-		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1776351960101">
-		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1776351960101">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1777377128375"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1777377128375">
+		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1777377128375">
+		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1777377128375">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -79,7 +79,7 @@
 						</button>
 					</div>
 				</div>
-				<div hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
+				<nav hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
 					<div class="services-submenu__container">
 						<div class="services-submenu__grid">
 							<div class="services-submenu__column">
@@ -227,8 +227,8 @@
 							</button>
 						</form>
 					</div>
-				</div>
-				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel" aria-label="Site search">
+				</nav>
+				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel">
 					<div class="search-panel__container">
 						<form action="#" class="search-panel__form" role="search">
 							<label class="search-panel__field">
@@ -244,7 +244,7 @@
 					</div>
 				</div>
 				<div class="header__overlay"></div>
-				<div hidden data-fls-init-hidden="" class="header__panel panel-header" aria-label="Mobile menu">
+				<div hidden data-fls-init-hidden="" class="header__panel panel-header">
 					<div class="panel-header__inner">
 						<div class="panel-header__top">
 							<ul class="panel-header__languages languages" aria-label="Language switcher">
@@ -359,7 +359,7 @@
 				</div>
 			</header>
 			<main class="page page--about">
-				<div class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
+				<section class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
 					<div class="page-heading__container">
 						<div class="page-heading__main">
 							<h1 id="page-heading-title" class="page-heading__title">Kontakti</h1>
@@ -371,7 +371,7 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</section>
 				<section class="contacts" data-fls-contacts="" aria-labelledby="contacts-title">
 					<div class="contacts__container">
 						<h2 id="contacts-title" class="sr-only">Kontakti</h2>
@@ -478,9 +478,9 @@
 						<h2 id="directions-title" class="directions__title">Kā pie mums nokļūt</h2>
 						<div class="directions__body">
 							<div class="directions__column directions__column_transport">
-								<h4 class="directions__subtitle">Ar sabiedrisko transportu</h4>
+								<h3 class="directions__subtitle">Ar sabiedrisko transportu</h3>
 								<div class="directions__routes">
-									<article class="directions__route route-directions">
+									<div class="directions__route route-directions">
 										<div class="route-directions__title">7. tramvajs</div>
 										<div class="route-directions__items">
 											<div class="route-directions__item">
@@ -498,8 +498,8 @@
 												<span class="route-directions__to">pietura "Katrīnas iela"</span>
 											</div>
 										</div>
-									</article>
-									<article class="directions__route route-directions">
+									</div>
+									<div class="directions__route route-directions">
 										<div class="route-directions__title">1. autobuss</div>
 										<div class="route-directions__items">
 											<div class="route-directions__item">
@@ -517,8 +517,8 @@
 												<span class="route-directions__to">pietura "Katrīnas iela"</span>
 											</div>
 										</div>
-									</article>
-									<article class="directions__route route-directions">
+									</div>
+									<div class="directions__route route-directions">
 										<div class="route-directions__title">7. tramvajs</div>
 										<div class="route-directions__items">
 											<div class="route-directions__item">
@@ -536,8 +536,8 @@
 												<span class="route-directions__to">pietura "Katrīnas iela"</span>
 											</div>
 										</div>
-									</article>
-									<article class="directions__route route-directions">
+									</div>
+									<div class="directions__route route-directions">
 										<div class="route-directions__title">1. autobuss</div>
 										<div class="route-directions__items">
 											<div class="route-directions__item">
@@ -555,20 +555,20 @@
 												<span class="route-directions__to">pietura "Katrīnas iela"</span>
 											</div>
 										</div>
-									</article>
+									</div>
 								</div>
 							</div>
 							<div class="directions__column directions__column_car">
-								<h4 class="directions__subtitle">Ar mašīnu</h4>
+								<h3 class="directions__subtitle">Ar mašīnu</h3>
 								<div class="directions__parking">
-									<article class="directions__parking-item">
+									<div class="directions__parking-item">
 										<p class="directions__parking-title">Bezmaksas stāvvieta</p>
 										<p class="directions__parking-text">Mūsu klientiem ir pieejama bezmaksas autostāvvieta</p>
-									</article>
-									<article class="directions__parking-item">
+									</div>
+									<div class="directions__parking-item">
 										<p class="directions__parking-title">Bezmaksas stāvvieta</p>
 										<p class="directions__parking-text">Mūsu klientiem ir pieejama bezmaksas autostāvvieta</p>
-									</article>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -645,7 +645,7 @@
 						</nav>
 						<div class="footer__info">
 							<div class="footer__details">
-								<h5 class="footer__title">Kontakti un darba laiks</h5>
+								<h3 class="footer__title">Kontakti un darba laiks</h3>
 								<div class="footer__blocks">
 									<div class="footer__block info-block info-block_location">
 										<div class="footer__heading info-block__heading">
@@ -738,7 +738,7 @@
 						</div>
 						<a href="#" class="footer__credit" aria-label="Developer">
 							<span>Izstrāde:</span>
-							<img data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
+							<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
 						</a>
 					</div>
 				</div>
@@ -751,7 +751,7 @@
 				</svg>
 			</button>
 		</div>
-		<div data-fls-popup="appointment" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
+		<div data-fls-popup="appointment" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
 			<div data-fls-popup-wrapper="" class="popup__wrapper">
 				<div data-fls-popup-body="" class="popup__body">
 					<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Aizvērt modālo logu"></button>

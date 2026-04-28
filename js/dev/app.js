@@ -110,7 +110,7 @@ let slideToggle = (target, duration = 500) => {
   }
 };
 let bodyLockStatus = true;
-let bodyUnlock = (delay = 500) => {
+let bodyUnlock = (delay = 500, reason = "") => {
   if (bodyLockStatus) {
     const lockPaddingElements = document.querySelectorAll("[data-fls-lp]");
     setTimeout(() => {
@@ -126,7 +126,7 @@ let bodyUnlock = (delay = 500) => {
     }, delay);
   }
 };
-let bodyLock = (delay = 500) => {
+let bodyLock = (delay = 500, reason = "") => {
   if (bodyLockStatus) {
     const lockPaddingElements = document.querySelectorAll("[data-fls-lp]");
     const lockPaddingValue = window.innerWidth - document.body.offsetWidth + "px";
@@ -328,6 +328,11 @@ class SelectConstructor {
   // Функция инициализации всех селектов
   selectsInit(selectItems) {
     selectItems.forEach((originalSelect, index) => {
+      if (originalSelect.parentElement?.classList.contains(this.selectClasses.classSelect)) {
+        originalSelect.dataset.flsSelectId = originalSelect.dataset.flsSelectId || `${index + 1}`;
+        this.selectBuild(originalSelect);
+        return;
+      }
       this.selectInit(originalSelect, index + 1);
     });
     document.addEventListener("click", (function(e) {
@@ -695,7 +700,18 @@ class SelectConstructor {
     }));
   }
 }
-document.querySelector("select[data-fls-select]") ? window.addEventListener("load", () => window.flsSelect = new SelectConstructor({})) : null;
+if (document.querySelector("select[data-fls-select]")) {
+  if (window.__flsSelectModuleInitialized) {
+    console.warn("[select] module already initialized, skipping duplicate init");
+  } else {
+    window.__flsSelectModuleInitialized = true;
+    window.addEventListener("load", () => {
+      if (!window.flsSelect) {
+        window.flsSelect = new SelectConstructor({});
+      }
+    });
+  }
+}
 const lazySelector = "img[data-fls-lazy], source[data-fls-lazy-srcset]";
 const loadedAttribute = "data-fls-lazy-loaded";
 function loadLazyElement(element) {
@@ -1187,154 +1203,181 @@ document.querySelector("[data-fls-popup]") ? window.addEventListener("load", () 
 function menuInit() {
   document.addEventListener("click", function(e) {
     const menuToggle = e.target.closest("[data-fls-menu]");
-    const isMenuOpen2 = document.documentElement.hasAttribute("data-fls-menu-open");
+    const isMenuOpen = document.documentElement.hasAttribute("data-fls-menu-open");
     const isInsideMenu = e.target.closest(".header__panel, .menu__body");
-    const isScrollLocked2 = document.documentElement.hasAttribute("data-fls-scrolllock");
+    const isScrollLocked = document.documentElement.hasAttribute("data-fls-scrolllock");
     if (bodyLockStatus && menuToggle) {
-      if (isMenuOpen2) {
-        bodyUnlock();
+      if (isMenuOpen) {
+        bodyUnlock(500, "menu:toggleClose");
         document.documentElement.removeAttribute("data-fls-menu-open");
       } else {
-        if (!isScrollLocked2) {
-          bodyLock();
+        if (!isScrollLocked) {
+          bodyLock(500, "menu:toggleOpen");
         }
         document.documentElement.setAttribute("data-fls-menu-open", "");
       }
       return;
     }
-    if (isMenuOpen2 && !isInsideMenu) {
-      bodyUnlock();
+    if (isMenuOpen && !isInsideMenu) {
+      bodyUnlock(500, "menu:outsideClickClose");
       document.documentElement.removeAttribute("data-fls-menu-open");
     }
   });
   document.addEventListener("keydown", function(e) {
     if (e.key !== "Escape" && e.key !== "Esc") return;
     if (!document.documentElement.hasAttribute("data-fls-menu-open")) return;
-    bodyUnlock();
+    bodyUnlock(500, "menu:escapeClose");
     document.documentElement.removeAttribute("data-fls-menu-open");
   });
 }
-document.querySelector("[data-fls-menu]") ? window.addEventListener("load", menuInit) : null;
-const searchBlocks = document.querySelectorAll(".search");
-const searchPanelInput = document.querySelector(".header__search-panel .search-panel__input");
-const headerElement = document.querySelector(".header");
-document.querySelector(".header__container");
-const menuToggles = document.querySelectorAll("[data-fls-menu]");
-const servicesTriggers = document.querySelectorAll("[data-services-trigger]");
-const servicesPanel = document.querySelector(".header__services-panel");
-const servicesItem = document.querySelector(".menu__item_has-services");
-const hoverMedia = window.matchMedia("(any-hover: hover)");
-const initiallyHiddenPanels = document.querySelectorAll("[data-fls-init-hidden]");
-const isMenuOpen = () => document.documentElement.hasAttribute("data-fls-menu-open");
-const isSearchOpen = () => headerElement?.classList.contains("_search-open");
-const isScrollLocked = () => document.documentElement.hasAttribute("data-fls-scrolllock");
-if (initiallyHiddenPanels.length) {
-  initiallyHiddenPanels.forEach((panel) => {
-    panel.hidden = false;
-  });
+if (window.__flsMenuModuleInitialized) {
+  console.warn("[menu] module already initialized, skipping duplicate init");
+} else {
+  window.__flsMenuModuleInitialized = true;
+  document.querySelector("[data-fls-menu]") ? window.addEventListener("load", menuInit) : null;
 }
-function setHeaderHeightVar() {
-  if (!headerElement) return;
-  document.documentElement.style.setProperty("--header-height", `${headerElement.offsetHeight}px`);
-}
-function closeServices(options = {}) {
-  const { unlock = true } = options;
-  headerElement?.classList.remove("_services-open");
-  servicesTriggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
-  if (unlock && !isSearchOpen() && !isMenuOpen()) {
-    bodyUnlock();
-  }
-}
-function openServices() {
-  if (isSearchOpen() || isMenuOpen()) return;
-  if (headerElement?.classList.contains("_services-open")) return;
-  if (!isScrollLocked() && bodyLockStatus) {
-    bodyLock();
-  }
-  headerElement?.classList.add("_services-open");
-  servicesTriggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "true"));
-}
-function clearSearchState(searchBlock) {
-  searchBlock.classList.remove("_search-active");
-  document.documentElement.removeAttribute("data-fls-search-open");
-  headerElement?.classList.remove("_search-open");
-}
-function closeSearch(searchBlock, options = {}) {
-  const { unlock = true } = options;
-  clearSearchState(searchBlock);
-  if (unlock && !isMenuOpen() && !headerElement?.classList.contains("_services-open")) {
-    bodyUnlock();
-  }
-}
-function openSearch(searchBlock) {
-  closeServices({ unlock: false });
-  searchBlock.classList.add("_search-active");
-  document.documentElement.setAttribute("data-fls-search-open", "");
-  headerElement?.classList.add("_search-open");
-  if (!isMenuOpen() && !isScrollLocked()) {
-    bodyLock();
-  }
-  if (searchPanelInput) {
-    setTimeout(() => searchPanelInput.focus(), 250);
-  }
-}
-function initHeaderSearch(searchBlock) {
-  const toggle = searchBlock.querySelector(".search__toggle");
-  if (!toggle) return;
-  toggle.addEventListener("click", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!bodyLockStatus) return;
-    const isOpen = searchBlock.classList.contains("_search-active");
-    if (isOpen) {
-      closeSearch(searchBlock);
-    } else {
-      document.querySelectorAll(".search._search-active").forEach((activeSearch) => {
-        if (activeSearch !== searchBlock) {
-          closeSearch(activeSearch);
-        }
-      });
-      openSearch(searchBlock);
+if (window.__flsHeaderModuleInitialized) {
+  console.warn("[header] module already initialized, skipping duplicate init");
+} else {
+  let setHeaderHeightVar = function() {
+    if (!headerElement) return;
+    document.documentElement.style.setProperty("--header-height", `${headerElement.offsetHeight}px`);
+  }, closeServices = function(options = {}) {
+    const { unlock = true } = options;
+    headerElement?.classList.remove("_services-open");
+    servicesTriggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
+    if (unlock && !isSearchOpen() && !isMenuOpen()) {
+      bodyUnlock(500, "header:closeServices");
     }
-  });
-}
-if (searchBlocks.length) {
-  setHeaderHeightVar();
-  window.addEventListener("load", setHeaderHeightVar);
-  window.addEventListener("resize", setHeaderHeightVar);
-  searchBlocks.forEach(initHeaderSearch);
-  document.addEventListener("click", (e) => {
-    searchBlocks.forEach((searchBlock) => {
-      if (!searchBlock.classList.contains("_search-active")) return;
-      if (e.target.closest(".search, .header__search-panel")) return;
-      closeSearch(searchBlock);
-    });
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key !== "Escape" && e.key !== "Esc") return;
-    document.querySelectorAll(".search._search-active").forEach(closeSearch);
-  });
-}
-if (menuToggles.length) {
-  menuToggles.forEach((toggle) => {
+  }, openServices = function() {
+    if (isSearchOpen() || isMenuOpen()) return;
+    if (headerElement?.classList.contains("_services-open")) return;
+    if (!isScrollLocked() && bodyLockStatus) {
+      bodyLock(500, "header:openServices");
+    }
+    headerElement?.classList.add("_services-open");
+    servicesTriggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "true"));
+  }, clearSearchState = function(searchBlock) {
+    searchBlock.classList.remove("_search-active");
+    document.documentElement.removeAttribute("data-fls-search-open");
+    headerElement?.classList.remove("_search-open");
+  }, closeSearch = function(searchBlock, options = {}) {
+    const { unlock = true, reason = "header:closeSearch" } = options;
+    clearSearchState(searchBlock);
+    if (unlock && !isMenuOpen() && !headerElement?.classList.contains("_services-open")) {
+      bodyUnlock(500, reason);
+    }
+  }, openSearch = function(searchBlock) {
+    closeServices({ unlock: false });
+    searchBlock.classList.add("_search-active");
+    document.documentElement.setAttribute("data-fls-search-open", "");
+    headerElement?.classList.add("_search-open");
+    if (!isMenuOpen() && !isScrollLocked()) {
+      bodyLock(500, "header:openSearch");
+    }
+    if (searchPanelInput) {
+      setTimeout(() => searchPanelInput.focus(), 250);
+    }
+  }, initHeaderSearch = function(searchBlock) {
+    const toggle = searchBlock.querySelector(".search__toggle");
+    if (!toggle) return;
     toggle.addEventListener("click", (e) => {
-      const activeSearches = document.querySelectorAll(".search._search-active");
-      if (!activeSearches.length) return;
       e.preventDefault();
       e.stopPropagation();
-      activeSearches.forEach((searchBlock) => closeSearch(searchBlock, { unlock: false }));
-      closeServices({ unlock: false });
-      document.documentElement.setAttribute("data-fls-menu-open", "");
+      if (!bodyLockStatus) return;
+      const isOpen = searchBlock.classList.contains("_search-active");
+      if (isOpen) {
+        closeSearch(searchBlock, { reason: "header:toggleCloseSearch" });
+      } else {
+        document.querySelectorAll(".search._search-active").forEach((activeSearch) => {
+          if (activeSearch !== searchBlock) {
+            closeSearch(activeSearch, { reason: "header:closeOtherSearchBeforeOpen" });
+          }
+        });
+        openSearch(searchBlock);
+      }
     });
-  });
-}
-if (servicesTriggers.length && servicesPanel && headerElement) {
-  if (hoverMedia.matches) {
-    servicesItem?.addEventListener("mouseenter", openServices);
-    servicesPanel.addEventListener("mouseenter", openServices);
-  } else {
+  };
+  window.__flsHeaderModuleInitialized = true;
+  const searchBlocks = document.querySelectorAll(".search");
+  const searchPanelInput = document.querySelector(".header__search-panel .search-panel__input");
+  const headerElement = document.querySelector(".header");
+  document.querySelector(".header__container");
+  const menuToggles = document.querySelectorAll("[data-fls-menu]");
+  const servicesTriggers = document.querySelectorAll("[data-services-trigger]");
+  const servicesPanel = document.querySelector(".header__services-panel");
+  const servicesItem = document.querySelector(".menu__item_has-services");
+  const hoverMedia = window.matchMedia("(any-hover: hover)");
+  const initiallyHiddenPanels = document.querySelectorAll("[data-fls-init-hidden]");
+  const isMenuOpen = () => document.documentElement.hasAttribute("data-fls-menu-open");
+  const isSearchOpen = () => headerElement?.classList.contains("_search-open");
+  const isScrollLocked = () => document.documentElement.hasAttribute("data-fls-scrolllock");
+  if (initiallyHiddenPanels.length) {
+    initiallyHiddenPanels.forEach((panel) => {
+      panel.hidden = false;
+    });
+  }
+  if (searchBlocks.length) {
+    setHeaderHeightVar();
+    window.addEventListener("load", setHeaderHeightVar);
+    window.addEventListener("resize", setHeaderHeightVar);
+    searchBlocks.forEach(initHeaderSearch);
+    document.addEventListener("click", (e) => {
+      searchBlocks.forEach((searchBlock) => {
+        if (!searchBlock.classList.contains("_search-active")) return;
+        if (e.target.closest(".search, .header__search-panel")) return;
+        closeSearch(searchBlock, { reason: "header:outsideClickCloseSearch" });
+      });
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape" && e.key !== "Esc") return;
+      document.querySelectorAll(".search._search-active").forEach((searchBlock) => {
+        closeSearch(searchBlock, { reason: "header:escapeCloseSearch" });
+      });
+    });
+  }
+  if (menuToggles.length) {
+    menuToggles.forEach((toggle) => {
+      toggle.addEventListener("click", (e) => {
+        const activeSearches = document.querySelectorAll(".search._search-active");
+        if (!activeSearches.length) return;
+        e.preventDefault();
+        e.stopPropagation();
+        activeSearches.forEach((searchBlock) => closeSearch(searchBlock, {
+          unlock: false,
+          reason: "header:closeSearchBeforeMenuOpen"
+        }));
+        closeServices({ unlock: false });
+        document.documentElement.setAttribute("data-fls-menu-open", "");
+      });
+    });
+  }
+  if (servicesTriggers.length && servicesPanel && headerElement) {
+    if (hoverMedia.matches) {
+      servicesItem?.addEventListener("mouseenter", openServices);
+      servicesPanel.addEventListener("mouseenter", openServices);
+    } else {
+      servicesTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const isOpen = headerElement.classList.contains("_services-open");
+          if (isOpen) {
+            closeServices();
+          } else {
+            openServices();
+          }
+        });
+      });
+      document.addEventListener("click", (e) => {
+        if (!headerElement.classList.contains("_services-open")) return;
+        if (e.target.closest("[data-services-trigger], .header__services-panel")) return;
+        closeServices();
+      });
+    }
     servicesTriggers.forEach((trigger) => {
       trigger.addEventListener("click", (e) => {
+        if (!hoverMedia.matches) return;
         e.preventDefault();
         e.stopPropagation();
         const isOpen = headerElement.classList.contains("_services-open");
@@ -1345,40 +1388,24 @@ if (servicesTriggers.length && servicesPanel && headerElement) {
         }
       });
     });
-    document.addEventListener("click", (e) => {
-      if (!headerElement.classList.contains("_services-open")) return;
-      if (e.target.closest("[data-services-trigger], .header__services-panel")) return;
-      closeServices();
-    });
   }
-  servicesTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", (e) => {
-      if (!hoverMedia.matches) return;
-      e.preventDefault();
-      e.stopPropagation();
-      const isOpen = headerElement.classList.contains("_services-open");
-      if (isOpen) {
-        closeServices();
-      } else {
-        openServices();
-      }
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("[data-fls-menu]")) return;
+    document.querySelectorAll(".search._search-active").forEach((searchBlock) => {
+      closeSearch(searchBlock, { reason: "header:documentMenuClickCloseSearch" });
     });
+    closeServices({ unlock: false });
+  });
+  document.addEventListener("click", (e) => {
+    if (!headerElement?.classList.contains("_services-open")) return;
+    if (e.target.closest(".header__container, .header__services-panel")) return;
+    closeServices();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape" && e.key !== "Esc") return;
+    closeServices();
   });
 }
-document.addEventListener("click", (e) => {
-  if (!e.target.closest("[data-fls-menu]")) return;
-  document.querySelectorAll(".search._search-active").forEach(closeSearch);
-  closeServices({ unlock: false });
-});
-document.addEventListener("click", (e) => {
-  if (!headerElement?.classList.contains("_services-open")) return;
-  if (e.target.closest(".header__container, .header__services-panel")) return;
-  closeServices();
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key !== "Escape" && e.key !== "Esc") return;
-  closeServices();
-});
 var rawCountryData = [
   [
     "af",

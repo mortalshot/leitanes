@@ -147,8 +147,14 @@
   .procedure-steps__heading {
     font-size: 1.75rem;
   }
+  .step-proc__title {
+    font-size: 1.125rem;
+  }
   .procedure-overview__top:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+  .procedure-overview__text h3 {
+    font-size: 1.125rem;
   }
   .procedure-overview__group {
     row-gap: 0.75rem;
@@ -174,6 +180,12 @@
 @media (min-width: 22.5em) and (max-width: 64em) {
   .procedure-steps__heading {
     font-size: clamp( 1.75rem , 1.343373493975rem  +  1.8072289157vw , 2.5rem );
+  }
+  .step-proc__title {
+    font-size: clamp( 1.125rem , 0.9216867469875rem  +  0.9036144578vw , 1.5rem );
+  }
+  .procedure-overview__text h3 {
+    font-size: clamp( 1.125rem , 0.9216867469875rem  +  0.9036144578vw , 1.5rem );
   }
 }
 @media (min-width: 22.5em) and (max-width: 64.0625em) {
@@ -243,6 +255,12 @@
 @media (min-width: 64em) {
   .procedure-steps__heading {
     font-size: 2.5rem;
+  }
+  .step-proc__title {
+    font-size: 1.5rem;
+  }
+  .procedure-overview__text h3 {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 64.06125em) and (max-width: 89.99875em) {

@@ -31,6 +31,16 @@
     column-gap: 1.5rem;
   }
 }
+@media (max-width: 22.5em) {
+  .content-editor__body h3 {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 22.5em) and (max-width: 64em) {
+  .content-editor__body h3 {
+    font-size: clamp( 1.125rem , 0.9216867469875rem  +  0.9036144578vw , 1.5rem );
+  }
+}
 @media (min-width: 47.99875em) {
   .content-editor__row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -39,6 +49,11 @@
 @media (min-width: 64em) and (max-width: 90em) {
   .content-editor__row {
     column-gap: clamp( 1.5rem , 0.26923076923125rem  +  1.9230769231vw , 2rem );
+  }
+}
+@media (min-width: 64em) {
+  .content-editor__body h3 {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 90em) {

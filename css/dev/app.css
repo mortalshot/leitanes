@@ -1115,7 +1115,7 @@ textarea.input {
 
 .input_phone {
   display: block;
-  padding: 0;
+  padding: 0 !important;
 }
 .input_phone .iti {
   width: 100%;
@@ -1840,7 +1840,7 @@ body::after {
   pointer-events: none;
 }
 .appointment-popup__textarea {
-  min-height: 8.25rem;
+  min-height: 8.25rem !important;
   resize: vertical;
 }
 .appointment-popup__agreement .checkbox__text {

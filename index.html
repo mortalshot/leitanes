@@ -11,19 +11,19 @@
 		<link rel="preload" href="./assets/fonts/DMSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1776351960102"></script>
-		<script type="module" crossorigin="" src="./js/gallery.min.js?v=1776351960102"></script>
-		<script type="module" crossorigin="" src="./js/gallery.min2.js?v=1776351960102"></script>
-		<script type="module" crossorigin="" src="./js/dynamic.min.js?v=1776351960102"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/gallery.min2.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/gallery.min.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/advantages.min.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/wdgblog.min.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/cspecialist.min.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/cservice.min.css?v=1776351960102">
-		<link rel="stylesheet" crossorigin="" href="./css/cpost.min.css?v=1776351960102">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1777377128378"></script>
+		<script type="module" crossorigin="" src="./js/gallery.min.js?v=1777377128378"></script>
+		<script type="module" crossorigin="" src="./js/gallery.min2.js?v=1777377128378"></script>
+		<script type="module" crossorigin="" src="./js/dynamic.min.js?v=1777377128378"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/gallery.min2.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/gallery.min.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/advantages.min.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/wdgblog.min.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/cspecialist.min.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/cservice.min.css?v=1777377128378">
+		<link rel="stylesheet" crossorigin="" href="./css/cpost.min.css?v=1777377128378">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -88,7 +88,7 @@
 						</button>
 					</div>
 				</div>
-				<div hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
+				<nav hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
 					<div class="services-submenu__container">
 						<div class="services-submenu__grid">
 							<div class="services-submenu__column">
@@ -236,8 +236,8 @@
 							</button>
 						</form>
 					</div>
-				</div>
-				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel" aria-label="Site search">
+				</nav>
+				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel">
 					<div class="search-panel__container">
 						<form action="#" class="search-panel__form" role="search">
 							<label class="search-panel__field">
@@ -253,7 +253,7 @@
 					</div>
 				</div>
 				<div class="header__overlay"></div>
-				<div hidden data-fls-init-hidden="" class="header__panel panel-header" aria-label="Mobile menu">
+				<div hidden data-fls-init-hidden="" class="header__panel panel-header">
 					<div class="panel-header__inner">
 						<div class="panel-header__top">
 							<ul class="panel-header__languages languages" aria-label="Language switcher">
@@ -404,7 +404,7 @@
 									</ul>
 								</div>
 							</div>
-							<button type="button" class="intro__button btn btn_fill-brown" data-fls-button="" aria-label="Book an appointment">
+							<button type="button" class="intro__button btn btn_fill-brown" data-fls-button="" data-fls-popup-link="appointment" aria-label="Book an appointment">
 								<span>Pieteikt vizīti</span>
 								<svg class="icon icon_chevron" aria-hidden="true">
 									<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
@@ -419,7 +419,7 @@
 							<div class="hero__slide swiper-slide">
 								<div class="hero__media">
 									<video autoplay muted loop playsinline="" preload="none" poster="./assets/img/hero/preview1.jpg">
-										<source data-src="assets/img/hero/video1.mp4" type="video/mp4">
+										<source src="./assets/img/hero/video1.mp4" type="video/mp4">
 									</video>
 								</div>
 							</div>
@@ -435,7 +435,7 @@
 							<div class="hero__slide swiper-slide">
 								<div class="hero__media">
 									<video muted loop playsinline="" preload="none" poster="./assets/img/hero/preview1.jpg">
-										<source data-src="assets/img/hero/video2.mp4" type="video/mp4">
+										<source src="./assets/img/hero/video2.mp4" type="video/mp4">
 									</video>
 								</div>
 							</div>
@@ -443,7 +443,7 @@
 					</div>
 					<div class="hero__container">
 						<div class="hero__body">
-							<div class="hero__navigation" aria-label="Hero slider controls">
+							<div class="hero__navigation" role="group" aria-label="Hero slider controls">
 								<button type="button" class="hero__arrow slider-arrow slider-arrow_prev" aria-label="Previous slide">
 									<svg class="icon" aria-hidden="true">
 										<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
@@ -463,50 +463,50 @@
 									</p>
 								</div>
 							</div>
-							<div class="hero__links" aria-label="Services categories">
+							<nav class="hero__links" aria-label="Services categories">
 								<a href="category-services.html" class="service-card" data-fls-cservice="">
-									<span class="service-card__media">
+									<div class="service-card__media">
 										<picture>
 											<img alt="Dermatoloģija" loading="lazy" src="./assets/img/hero/sevices1.webp">
 										</picture>
-									</span>
-									<span class="service-card__overlay" aria-hidden="true"></span>
-									<span class="service-card__content">
-										<h4 class="service-card__title">Dermatoloģija</h4>
+									</div>
+									<div class="service-card__overlay" aria-hidden="true"></div>
+									<div class="service-card__content">
+										<span class="service-card__title">Dermatoloģija</span>
 										<span class="service-card__text">
 											Sejas kontūrplastika, fillera injekcija, botoksa injekcijas, biorevitalizācija, mezoterapija, APTOS diegi, rētu korekcija, kosmetologa konsultācija, pastiprinātas svīšanas ārstēšana
 										</span>
-									</span>
+									</div>
 								</a>
 								<a href="category-services.html" class="service-card" data-fls-cservice="">
-									<span class="service-card__media">
+									<div class="service-card__media">
 										<picture>
 											<img alt="Estētiskā medicīna" loading="lazy" src="./assets/img/hero/sevices2.webp">
 										</picture>
-									</span>
-									<span class="service-card__overlay" aria-hidden="true"></span>
-									<span class="service-card__content">
-										<h4 class="service-card__title">Estētiskā medicīna</h4>
+									</div>
+									<div class="service-card__overlay" aria-hidden="true"></div>
+									<div class="service-card__content">
+										<span class="service-card__title">Estētiskā medicīna</span>
 										<span class="service-card__text">
 											Sejas kontūrplastika, fillera injekcija, botoksa injekcijas, biorevitalizācija, mezoterapija, APTOS diegi, rētu korekcija, kosmetologa konsultācija
 										</span>
-									</span>
+									</div>
 								</a>
 								<a href="category-services.html" class="service-card" data-fls-cservice="">
-									<span class="service-card__media">
+									<div class="service-card__media">
 										<picture>
 											<img alt="Kosmetoloģija" loading="lazy" src="./assets/img/hero/sevices3.webp">
 										</picture>
-									</span>
-									<span class="service-card__overlay" aria-hidden="true"></span>
-									<span class="service-card__content">
-										<h4 class="service-card__title">Kosmetoloģija</h4>
+									</div>
+									<div class="service-card__overlay" aria-hidden="true"></div>
+									<div class="service-card__content">
+										<span class="service-card__title">Kosmetoloģija</span>
 										<span class="service-card__text">
 											Sejas kontūrplastika, fillera injekcija, botoksa injekcijas, biorevitalizācija, mezoterapija, APTOS diegi, rētu korekcija, kosmetologa konsultācija
 										</span>
-									</span>
+									</div>
 								</a>
-							</div>
+							</nav>
 						</div>
 					</div>
 				</section>
@@ -521,37 +521,37 @@
 								<div class="advantage-item__icon">
 									<img src="./assets/img/advantages/adv-item1.svg" alt="" aria-hidden="true">
 								</div>
-								<h5 class="advantage-item__title">15 gadu pieredze un klientu uzticība</h5>
+								<h3 class="advantage-item__title">15 gadu pieredze un klientu uzticība</h3>
 							</div>
 							<div class="advantages__item advantage-item">
 								<div class="advantage-item__icon">
 									<img src="./assets/img/advantages/adv-item2.svg" alt="" aria-hidden="true">
 								</div>
-								<h5 class="advantage-item__title">Augsti kvalificēti speciālisti</h5>
+								<h3 class="advantage-item__title">Augsti kvalificēti speciālisti</h3>
 							</div>
 							<div class="advantages__item advantage-item">
 								<div class="advantage-item__icon">
 									<img src="./assets/img/advantages/adv-item3.svg" alt="" aria-hidden="true">
 								</div>
-								<h5 class="advantage-item__title">Mūsdienīgas iekārtas un tehnoloģijas</h5>
+								<h3 class="advantage-item__title">Mūsdienīgas iekārtas un tehnoloģijas</h3>
 							</div>
 							<div class="advantages__item advantage-item">
 								<div class="advantage-item__icon">
 									<img src="./assets/img/advantages/adv-item4.svg" alt="" aria-hidden="true">
 								</div>
-								<h5 class="advantage-item__title">Drošas un sertificētas procedūras</h5>
+								<h3 class="advantage-item__title">Drošas un sertificētas procedūras</h3>
 							</div>
 							<div class="advantages__item advantage-item">
 								<div class="advantage-item__icon">
 									<img src="./assets/img/advantages/adv-item5.svg" alt="" aria-hidden="true">
 								</div>
-								<h5 class="advantage-item__title">Dabiski un noturīgi rezultāti</h5>
+								<h3 class="advantage-item__title">Dabiski un noturīgi rezultāti</h3>
 							</div>
 							<div class="advantages__item advantage-item">
 								<div class="advantage-item__icon">
 									<img src="./assets/img/advantages/adv-item6.svg" alt="" aria-hidden="true">
 								</div>
-								<h5 class="advantage-item__title">Individuāla pieeja katram pacientam</h5>
+								<h3 class="advantage-item__title">Individuāla pieeja katram pacientam</h3>
 							</div>
 						</div>
 					</div>
@@ -570,7 +570,7 @@
 						<div class="widget-offers__grid">
 							<article class="widget-offers__item post-card post-card_large" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog1-preview.webp" alt="Piesakoties konsultācijai līdz 31.12.2025., saņemsi 40% atlaidi">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog1-preview.webp" alt="Piesakoties konsultācijai līdz 31.12.2025., saņemsi 40% atlaidi">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -586,7 +586,7 @@
 							</article>
 							<article class="widget-offers__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -602,7 +602,7 @@
 							</article>
 							<article class="widget-offers__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -634,7 +634,7 @@
 							<div class="widget-specialists__wrapper swiper-wrapper">
 								<article class="widget-specialists__slide swiper-slide specialist-card" data-fls-cspecialist="" data-specialist-category="all">
 									<a href="single-specialists.html" class="specialist-card__image">
-										<img data-fls-lazy="./assets/img/specialists/specialist1.webp" alt="Dr. Olga Leitāne">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/specialists/specialist1.webp" alt="Dr. Olga Leitāne">
 									</a>
 									<div class="specialist-card__content">
 										<h3 class="specialist-card__name">
@@ -649,7 +649,7 @@
 								</article>
 								<article class="widget-specialists__slide swiper-slide specialist-card" data-fls-cspecialist="" data-specialist-category="all">
 									<a href="single-specialists.html" class="specialist-card__image">
-										<img data-fls-lazy="./assets/img/specialists/specialist2.webp" alt="Marija Stepanova">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/specialists/specialist2.webp" alt="Marija Stepanova">
 									</a>
 									<div class="specialist-card__content">
 										<h3 class="specialist-card__name">
@@ -664,7 +664,7 @@
 								</article>
 								<article class="widget-specialists__slide swiper-slide specialist-card" data-fls-cspecialist="" data-specialist-category="all">
 									<a href="single-specialists.html" class="specialist-card__image">
-										<img data-fls-lazy="./assets/img/specialists/specialist3.webp" alt="Tamara Sturua">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/specialists/specialist3.webp" alt="Tamara Sturua">
 									</a>
 									<div class="specialist-card__content">
 										<h3 class="specialist-card__name">
@@ -679,7 +679,7 @@
 								</article>
 								<article class="widget-specialists__slide swiper-slide specialist-card" data-fls-cspecialist="" data-specialist-category="all">
 									<a href="single-specialists.html" class="specialist-card__image">
-										<img data-fls-lazy="./assets/img/specialists/specialist4.webp" alt="Aleksandra Mamonova">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/specialists/specialist4.webp" alt="Aleksandra Mamonova">
 									</a>
 									<div class="specialist-card__content">
 										<h3 class="specialist-card__name">
@@ -694,7 +694,7 @@
 								</article>
 								<article class="widget-specialists__slide swiper-slide specialist-card" data-fls-cspecialist="" data-specialist-category="all">
 									<a href="single-specialists.html" class="specialist-card__image">
-										<img data-fls-lazy="./assets/img/specialists/specialist5.webp" alt="Svetlana Jurisova">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/specialists/specialist5.webp" alt="Svetlana Jurisova">
 									</a>
 									<div class="specialist-card__content">
 										<h3 class="specialist-card__name">
@@ -709,7 +709,7 @@
 								</article>
 								<article class="widget-specialists__slide swiper-slide specialist-card" data-fls-cspecialist="" data-specialist-category="all">
 									<a href="single-specialists.html" class="specialist-card__image">
-										<img data-fls-lazy="./assets/img/specialists/specialist6.webp" alt="Specialist 6">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/specialists/specialist6.webp" alt="Specialist 6">
 									</a>
 									<div class="specialist-card__content">
 										<h3 class="specialist-card__name">
@@ -724,7 +724,7 @@
 								</article>
 							</div>
 						</div>
-						<div class="widget-specialists__navigation" aria-label="Specialists slider controls">
+						<div class="widget-specialists__navigation" role="group" aria-label="Specialists slider controls">
 							<button type="button" class="widget-specialists__arrow slider-arrow slider-arrow_prev" aria-label="Previous specialists">
 								<svg class="icon" aria-hidden="true">
 									<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
@@ -766,7 +766,7 @@
 					<div class="widget-gallery__container">
 						<div class="widget-gallery__head">
 							<h2 id="wdggallery-title" class="widget-gallery__title sr-only">Gallery</h2>
-							<div class="widget-gallery__navigation" aria-label="Gallery slider controls">
+							<div class="widget-gallery__navigation" role="group" aria-label="Gallery slider controls">
 								<button type="button" class="widget-gallery__arrow slider-arrow slider-arrow_prev" aria-label="Previous gallery image">
 									<svg class="icon" aria-hidden="true">
 										<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
@@ -869,7 +869,7 @@
 						<div class="widget-blog__grid">
 							<article class="widget-blog__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-news.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog4-preview.webp" alt="Lūpu palielināšana vai drošas fillera injekcijas – par kurām zināt tikai Jūs">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog4-preview.webp" alt="Lūpu palielināšana vai drošas fillera injekcijas – par kurām zināt tikai Jūs">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -885,7 +885,7 @@
 							</article>
 							<article class="widget-blog__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-news.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog5-preview.webp" alt="Fermentu komplekss PB Serum Enzymatic Reagents">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog5-preview.webp" alt="Fermentu komplekss PB Serum Enzymatic Reagents">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -901,7 +901,7 @@
 							</article>
 							<article class="widget-blog__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-news.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog6-preview.webp" alt="Fermentu komplekss PB Serum Enzymatic Reagents">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog6-preview.webp" alt="Fermentu komplekss PB Serum Enzymatic Reagents">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -917,7 +917,7 @@
 							</article>
 							<article class="widget-blog__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-news.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog7-preview.webp" alt="Rudens skaistuma procedūras">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog7-preview.webp" alt="Rudens skaistuma procedūras">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -938,7 +938,7 @@
 					<div class="widget-partners__container">
 						<div class="widget-partners__head _heading">
 							<h2 id="partners-title" class="widget-partners__title">Sadarbības partneri</h2>
-							<div class="widget-partners__navigation" aria-label="Partners slider controls">
+							<div class="widget-partners__navigation" role="group" aria-label="Partners slider controls">
 								<button type="button" class="widget-partners__arrow slider-arrow slider-arrow_prev" aria-label="Previous partners">
 									<svg class="icon" aria-hidden="true">
 										<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
@@ -955,37 +955,37 @@
 							<div class="widget-partners__wrapper swiper-wrapper">
 								<div class="widget-partners__slide swiper-slide">
 									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 1">
-										<img data-fls-lazy="./assets/img/partners/partners1.webp" alt="Partner logo 1">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/partners/partners1.webp" alt="Partner logo 1">
 									</a>
 								</div>
 								<div class="widget-partners__slide swiper-slide">
 									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 2">
-										<img data-fls-lazy="./assets/img/partners/partners2.webp" alt="Partner logo 2">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/partners/partners2.webp" alt="Partner logo 2">
 									</a>
 								</div>
 								<div class="widget-partners__slide swiper-slide">
 									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 3">
-										<img data-fls-lazy="./assets/img/partners/partners3.webp" alt="Partner logo 3">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/partners/partners3.webp" alt="Partner logo 3">
 									</a>
 								</div>
 								<div class="widget-partners__slide swiper-slide">
 									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 4">
-										<img data-fls-lazy="./assets/img/partners/partners4.webp" alt="Partner logo 4">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/partners/partners4.webp" alt="Partner logo 4">
 									</a>
 								</div>
 								<div class="widget-partners__slide swiper-slide">
 									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 5">
-										<img data-fls-lazy="./assets/img/partners/partners5.webp" alt="Partner logo 5">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/partners/partners5.webp" alt="Partner logo 5">
 									</a>
 								</div>
 								<div class="widget-partners__slide swiper-slide">
 									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 6">
-										<img data-fls-lazy="./assets/img/partners/partners6.webp" alt="Partner logo 6">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/partners/partners6.webp" alt="Partner logo 6">
 									</a>
 								</div>
 								<div class="widget-partners__slide swiper-slide">
 									<a href="#" class="widget-partners__logo partner-logo" aria-label="Partner 7">
-										<img data-fls-lazy="./assets/img/partners/partners1.webp" alt="Partner logo 7">
+										<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/partners/partners1.webp" alt="Partner logo 7">
 									</a>
 								</div>
 							</div>
@@ -1063,7 +1063,7 @@
 						</nav>
 						<div class="footer__info">
 							<div class="footer__details">
-								<h5 class="footer__title">Kontakti un darba laiks</h5>
+								<h3 class="footer__title">Kontakti un darba laiks</h3>
 								<div class="footer__blocks">
 									<div class="footer__block info-block info-block_location">
 										<div class="footer__heading info-block__heading">
@@ -1156,7 +1156,7 @@
 						</div>
 						<a href="#" class="footer__credit" aria-label="Developer">
 							<span>Izstrāde:</span>
-							<img data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
+							<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
 						</a>
 					</div>
 				</div>
@@ -1169,7 +1169,7 @@
 				</svg>
 			</button>
 		</div>
-		<div data-fls-popup="appointment" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
+		<div data-fls-popup="appointment" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
 			<div data-fls-popup-wrapper="" class="popup__wrapper">
 				<div data-fls-popup-body="" class="popup__body">
 					<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Aizvērt modālo logu"></button>

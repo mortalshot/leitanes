@@ -70,6 +70,9 @@
   .text-page__container {
     row-gap: 1.5rem;
   }
+  .text-page__content h3 {
+    font-size: 1.125rem;
+  }
   .text-page__content._content {
     font-size: 1rem;
   }
@@ -80,6 +83,9 @@
 @media (min-width: 22.5em) and (max-width: 64em){
   .text-page__container {
     row-gap: clamp( 1.5rem , 1.22891566265rem  +  1.2048192771vw , 2rem );
+  }
+  .text-page__content h3 {
+    font-size: clamp( 1.125rem , 0.9216867469875rem  +  0.9036144578vw , 1.5rem );
   }
   .text-nav__link {
     font-size: clamp( 0.875rem , 0.8072289156625rem  +  0.3012048193vw , 1rem );
@@ -98,6 +104,9 @@
 @media (min-width: 64em){
   .text-page__container {
     row-gap: 2rem;
+  }
+  .text-page__content h3 {
+    font-size: 1.5rem;
   }
   .text-nav__link {
     font-size: 1rem;

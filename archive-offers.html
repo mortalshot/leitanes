@@ -11,11 +11,11 @@
 		<link rel="preload" href="./assets/fonts/DMSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Archive offers</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1776351960104"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1776351960104">
-		<link rel="stylesheet" crossorigin="" href="./css/cpagination.min.css?v=1776351960104">
-		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1776351960104">
-		<link rel="stylesheet" crossorigin="" href="./css/cpost.min.css?v=1776351960104">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1777377128377"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1777377128377">
+		<link rel="stylesheet" crossorigin="" href="./css/cpagination.min.css?v=1777377128377">
+		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1777377128377">
+		<link rel="stylesheet" crossorigin="" href="./css/cpost.min.css?v=1777377128377">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -80,7 +80,7 @@
 						</button>
 					</div>
 				</div>
-				<div hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
+				<nav hidden data-fls-init-hidden="" class="header__services-panel services-submenu" id="services-submenu" aria-label="Services submenu">
 					<div class="services-submenu__container">
 						<div class="services-submenu__grid">
 							<div class="services-submenu__column">
@@ -228,8 +228,8 @@
 							</button>
 						</form>
 					</div>
-				</div>
-				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel" aria-label="Site search">
+				</nav>
+				<div hidden data-fls-init-hidden="" class="header__search-panel search-panel">
 					<div class="search-panel__container">
 						<form action="#" class="search-panel__form" role="search">
 							<label class="search-panel__field">
@@ -245,7 +245,7 @@
 					</div>
 				</div>
 				<div class="header__overlay"></div>
-				<div hidden data-fls-init-hidden="" class="header__panel panel-header" aria-label="Mobile menu">
+				<div hidden data-fls-init-hidden="" class="header__panel panel-header">
 					<div class="panel-header__inner">
 						<div class="panel-header__top">
 							<ul class="panel-header__languages languages" aria-label="Language switcher">
@@ -360,7 +360,7 @@
 				</div>
 			</header>
 			<main class="page">
-				<div class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
+				<section class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
 					<div class="page-heading__container">
 						<div class="page-heading__main">
 							<h1 id="page-heading-title" class="page-heading__title">Īpašie piedāvājumi</h1>
@@ -378,7 +378,7 @@
 								</p>
 							</div>
 							<div class="page-heading__actions">
-								<a href="tel:+371 20 750 750" class="page-heading__phone title-h5">
+								<a href="tel:+37120750750" class="page-heading__phone title-h5">
 									<svg class="icon" aria-hidden="true">
 										<use href="./assets/img/spritemap.svg#sprite-phone"></use>
 									</svg>
@@ -393,14 +393,14 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 				<section class="offers-grid section-bg" data-fls-offersgrid="" aria-labelledby="offers-grid-title">
 					<div class="offers-grid__container">
 						<h2 id="offers-grid-title" class="sr-only">Citi piedāvājumi</h2>
 						<div class="offers-grid__items">
 							<article class="offers-grid__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -416,7 +416,7 @@
 							</article>
 							<article class="offers-grid__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
 								</a>
 								<div class="post-card__content">
 									<div class="post-card__badge">Piedāvājums spēkā līdz: 31.10.2025</div>
@@ -433,7 +433,7 @@
 							</article>
 							<article class="offers-grid__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -449,7 +449,7 @@
 							</article>
 							<article class="offers-grid__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -465,7 +465,7 @@
 							</article>
 							<article class="offers-grid__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog2-preview.webp" alt="Rudens skaistuma procedūras">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -481,7 +481,7 @@
 							</article>
 							<article class="offers-grid__item post-card post-card_horizontal" data-fls-cpost="">
 								<a href="single-offers.html" class="post-card__image">
-									<img data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
+									<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/blog/blog3-preview.webp" alt="20% atlaide PRX-T33 ādas atjaunošanas procedūrai">
 								</a>
 								<div class="post-card__content">
 									<h3 class="post-card__title">
@@ -611,7 +611,7 @@
 						</nav>
 						<div class="footer__info">
 							<div class="footer__details">
-								<h5 class="footer__title">Kontakti un darba laiks</h5>
+								<h3 class="footer__title">Kontakti un darba laiks</h3>
 								<div class="footer__blocks">
 									<div class="footer__block info-block info-block_location">
 										<div class="footer__heading info-block__heading">
@@ -704,7 +704,7 @@
 						</div>
 						<a href="#" class="footer__credit" aria-label="Developer">
 							<span>Izstrāde:</span>
-							<img data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
+							<img src="./assets/img/placeholder.svg" data-fls-lazy="./assets/img/developer.webp" alt="devnrise">
 						</a>
 					</div>
 				</div>
@@ -717,7 +717,7 @@
 				</svg>
 			</button>
 		</div>
-		<div data-fls-popup="appointment" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
+		<div data-fls-popup="appointment" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
 			<div data-fls-popup-wrapper="" class="popup__wrapper">
 				<div data-fls-popup-body="" class="popup__body">
 					<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Aizvērt modālo logu"></button>

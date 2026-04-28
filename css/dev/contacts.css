@@ -181,6 +181,9 @@
   .directions__body {
     row-gap: 1.5rem;
   }
+  .directions__subtitle {
+    font-size: 1.125rem;
+  }
   .directions__routes {
     row-gap: 1.25rem;
   }
@@ -222,6 +225,9 @@
   }
   .directions__body {
     row-gap: clamp( 1.5rem , 0.9578313253rem  +  2.4096385542vw , 2.5rem );
+  }
+  .directions__subtitle {
+    font-size: clamp( 1.125rem , 0.9216867469875rem  +  0.9036144578vw , 1.5rem );
   }
   .directions__routes {
     row-gap: clamp( 1.25rem , 0.843373493975rem  +  1.8072289157vw , 2rem );
@@ -279,6 +285,9 @@
   }
   .directions__body {
     row-gap: 2.5rem;
+  }
+  .directions__subtitle {
+    font-size: 1.5rem;
   }
   .directions__routes {
     row-gap: 2rem;
