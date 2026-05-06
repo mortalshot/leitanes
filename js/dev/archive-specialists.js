@@ -1,4 +1,5 @@
 import "./app.min.js";
+import "./popup.min.js";
 /* empty css                */
 /* empty css                */
 const specialistsGrids = document.querySelectorAll("[data-fls-specialistsgrid]");

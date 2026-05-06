@@ -1,0 +1,1 @@
+.offers-grid__items{display:grid;gap:2rem}@media (min-width:47.99875em){.offers-grid__items{grid-template-columns:repeat(2,1fr)}}

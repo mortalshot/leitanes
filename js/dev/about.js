@@ -1,5 +1,6 @@
 import { b as bodyLockStatus, a as bodyLock, c as bodyUnlock } from "./app.min.js";
 import { g as getDocument, i as isObject, e as elementChildren, S as Swiper, A as A11y, N as Navigation, l as lightGallery } from "./gallery.min.js";
+import "./popup.min.js";
 /* empty css               */
 /* empty css              */
 import "./dynamic.min.js";

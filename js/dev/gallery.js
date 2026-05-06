@@ -4831,6 +4831,27 @@ function updateHeroVideoState(swiper, shouldPlay = true) {
     });
   });
 }
+function updatePartnersSliderLayout(swiper) {
+  requestAnimationFrame(() => {
+    swiper.updateSize();
+    swiper.updateSlides();
+    swiper.updateProgress();
+    swiper.updateSlidesClasses();
+    swiper.update();
+  });
+}
+function bindPartnersSliderImages(swiper, slider) {
+  const images = slider.querySelectorAll("img");
+  images.forEach((image) => {
+    image.addEventListener(
+      "load",
+      () => {
+        updatePartnersSliderLayout(swiper);
+      },
+      { once: true }
+    );
+  });
+}
 function initHeroSliders() {
   const sliders = document.querySelectorAll('[data-fls-slider="hero"]');
   sliders.forEach((slider) => {
@@ -4890,7 +4911,7 @@ function initPartnersSliders() {
     const prevButton = section?.querySelector(".slider-arrow_prev");
     const nextButton = section?.querySelector(".slider-arrow_next");
     if (!prevButton || !nextButton) return;
-    new Swiper(slider, {
+    const partnersSwiper = new Swiper(slider, {
       modules: [Navigation, A11y, Grid],
       observer: true,
       observeParents: true,
@@ -4941,6 +4962,8 @@ function initPartnersSliders() {
         }
       }
     });
+    bindPartnersSliderImages(partnersSwiper, slider);
+    updatePartnersSliderLayout(partnersSwiper);
   });
 }
 function initSpecialistsSliders() {

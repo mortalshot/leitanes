@@ -10,13 +10,14 @@
 		<link rel="preload" href="./assets/fonts/DMSans-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="preload" href="./assets/fonts/DMSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Contacts</title>
+		<title>Meklēšanas rezultāti</title>
 		<script type="module" crossorigin="" src="./js/app.min.js?v=1778069547808"></script>
 		<script type="module" crossorigin="" src="./js/popup.min.js?v=1778069547808"></script>
 		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1778069547808">
 		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1778069547808">
-		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1778069547808">
+		<link rel="stylesheet" crossorigin="" href="./css/search-results.min.css?v=1778069547808">
 		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1778069547808">
+		<link rel="stylesheet" crossorigin="" href="./css/cpagination.min.css?v=1778069547808">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -360,11 +361,11 @@
 					</div>
 				</div>
 			</header>
-			<main class="page page--about">
+			<main class="page">
 				<section class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
 					<div class="page-heading__container">
 						<div class="page-heading__main">
-							<h1 id="page-heading-title" class="page-heading__title">Kontakti</h1>
+							<h1 id="page-heading-title" class="page-heading__title">Meklēšanas rezultāti</h1>
 							<a href="index.html" class="page-heading__back">
 								<svg class="icon" aria-hidden="true">
 									<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
@@ -374,204 +375,173 @@
 						</div>
 					</div>
 				</section>
-				<section class="contacts" data-fls-contacts="" aria-labelledby="contacts-title">
-					<div class="contacts__container">
-						<h2 id="contacts-title" class="sr-only">Kontakti</h2>
-						<div class="contacts__body">
-							<div class="contacts__content">
-								<div class="contacts__head _content">
-									<h3 class="contacts__name mb-0">Dr. Leitānes JK klīnika</h3>
-									<p class="contacts__code">Ārstniecības iestādes kods: 001000205</p>
+				<section class="search-page" data-fls-searchpage="" aria-labelledby="search-page-title">
+					<div class="search-page__container">
+						<form action="#" class="search-page__form" role="search">
+							<label class="search-page__field">
+								<span class="sr-only">Meklēt</span>
+								<input data-fls-input="" type="text" name="search-page" class="input search-page__input" placeholder="Ievadiet, ko vēlaties atrast" value="ceļš" autocomplete="off">
+							</label>
+							<button type="submit" class="search-page__submit" aria-label="Submit search">
+								<svg class="icon" aria-hidden="true">
+									<use href="./assets/img/spritemap.svg#sprite-search"></use>
+								</svg>
+							</button>
+						</form>
+						<div class="search-page__layout">
+							<aside class="search-page__aside">
+								<nav class="search-page__nav" aria-label="Meklēšanas kategorijas">
+									<ul class="search-page__nav-list">
+										<li class="search-page__nav-item">
+											<a href="#" class="search-page__nav-link is-active">
+												<span class="search-page__nav-text">Visi</span>
+												<span class="search-page__nav-count">24</span>
+											</a>
+										</li>
+										<li class="search-page__nav-item">
+											<a href="#" class="search-page__nav-link">
+												<span class="search-page__nav-text">Pakalpojumi</span>
+												<span class="search-page__nav-count">3</span>
+											</a>
+										</li>
+										<li class="search-page__nav-item">
+											<a href="#" class="search-page__nav-link">
+												<span class="search-page__nav-text">Īpašie piedāvājumi</span>
+												<span class="search-page__nav-count">7</span>
+											</a>
+										</li>
+										<li class="search-page__nav-item">
+											<a href="#" class="search-page__nav-link">
+												<span class="search-page__nav-text">Populārākie raksti</span>
+												<span class="search-page__nav-count">1</span>
+											</a>
+										</li>
+										<li class="search-page__nav-item">
+											<a href="#" class="search-page__nav-link">
+												<span class="search-page__nav-text">Speciālisti</span>
+												<span class="search-page__nav-count">12</span>
+											</a>
+										</li>
+										<li class="search-page__nav-item">
+											<a href="#" class="search-page__nav-link">
+												<span class="search-page__nav-text">Cits</span>
+												<span class="search-page__nav-count">3</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</aside>
+							<div class="search-page__content">
+								<h2 id="search-page-title" class="sr-only">Meklēšanas rezultātu saraksts</h2>
+								<h3 class="search-page__summary">Jūs meklējāt „ceļš”. Atrasti 58 rezultāti.</h3>
+								<div class="search-page__results" role="list">
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-news.html">
+												Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/kekavas-apvedcels-atklats-satiksmei/" class="search-page__result-url">https://jusukosmetologs.lv/news/kekavas-apvedcels-atklats-satiksmei/</a>
+									</article>
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-services.html">
+												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/vasaras-sakums-kosmetologiem/" class="search-page__result-url">https://jusukosmetologs.lv/news/vasaras-sakums-kosmetologiem/</a>
+									</article>
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-offers.html">
+												Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/jaunumi-no-kosmetologu-pasaules/" class="search-page__result-url">https://jusukosmetologs.lv/news/jaunumi-no-kosmetologu-pasaules/</a>
+									</article>
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-news.html">
+												Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/jaunumi-kosmetologiem/" class="search-page__result-url">https://jusukosmetologs.lv/news/jaunumi-kosmetologiem/</a>
+									</article>
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-news.html">
+												Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/kekavas-apvedcels-atklats-satiksmei/" class="search-page__result-url">https://jusukosmetologs.lv/news/kekavas-apvedcels-atklats-satiksmei/</a>
+									</article>
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-services.html">
+												Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/vasaras-sakums-kosmetologiem/" class="search-page__result-url">https://jusukosmetologs.lv/news/vasaras-sakums-kosmetologiem/</a>
+									</article>
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-offers.html">
+												Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/jaunumi-no-kosmetologu-pasaules/" class="search-page__result-url">https://jusukosmetologs.lv/news/jaunumi-no-kosmetologu-pasaules/</a>
+									</article>
+									<article class="search-page__result" role="listitem">
+										<h4 class="search-page__result-title">
+											<a href="single-news.html">
+												Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+											</a>
+										</h4>
+										<a href="https://jusukosmetologs.lv/news/jaunumi-kosmetologiem/" class="search-page__result-url">https://jusukosmetologs.lv/news/jaunumi-kosmetologiem/</a>
+									</article>
 								</div>
-								<div class="contacts__main">
-									<div class="contacts__info">
-										<div class="contacts__block info-block info-block_location">
-											<div class="info-block__heading">
+								<nav class="c-pagination" data-fls-cpagination="" aria-label="Pagination">
+									<div class="c-pagination__controls">
+										<div class="c-pagination__arrows">
+											<a href="#" class="c-pagination__arrow c-pagination__arrow_prev" aria-label="Previous page">
 												<svg class="icon" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-location"></use>
+													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
 												</svg>
-												<p class="info-block__title">Adrese</p>
-											</div>
-											<div class="info-block__body">
-												<p>Katrīnas iela 9, Rīga, LV-1045</p>
-												<a href="#">Skatīt kartē un saņemt norādes</a>
-											</div>
-										</div>
-										<div class="contacts__block info-block info-block_schedule">
-											<div class="info-block__heading">
+											</a>
+											<a href="#" class="c-pagination__arrow c-pagination__arrow_next" aria-label="Next page">
 												<svg class="icon" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-schedule"></use>
-												</svg>
-												<p class="info-block__title">Darba laiks</p>
-											</div>
-											<div class="info-block__body">
-												<ul class="info-block__list">
-													<li>Pr. – Pk.: 09:00 – 20:00</li>
-													<li>Sestdien.: 09:00 – 17:00</li>
-													<li>Svētdien.: Brīvs</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="contacts__aside">
-										<div class="contacts__contacts contact-list">
-											<div class="contact-list__item">
-												<span class="contact-list__label">Tālrunis</span>
-												<a href="tel:+37120750750" class="contact-list__value">+371 20 750 750</a>
-											</div>
-											<div class="contact-list__item">
-												<span class="contact-list__label">E-pasts</span>
-												<a href="mailto:info@jusudomens.lv" class="contact-list__value">info@jusudomens.lv</a>
-											</div>
-										</div>
-										<div class="contacts__button">
-											<a href="#" class="btn btn_fill-grey">
-												<span>Pieteikt vizīti</span>
-												<svg class="icon icon_chevron" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
 												</svg>
 											</a>
 										</div>
+										<ul class="c-pagination__list">
+											<li class="c-pagination__item c-pagination__item_first">
+												<a href="#" class="c-pagination__link _active">1</a>
+											</li>
+											<li class="c-pagination__item c-pagination__item_second">
+												<a href="#" class="c-pagination__link">2</a>
+											</li>
+											<li class="c-pagination__item c-pagination__item_third">
+												<a href="#" class="c-pagination__link">3</a>
+											</li>
+											<li class="c-pagination__item c-pagination__item_hidden-mobile">
+												<a href="#" class="c-pagination__link">5</a>
+											</li>
+											<li class="c-pagination__item c-pagination__item_dots">
+												<span class="c-pagination__dots">...</span>
+											</li>
+											<li class="c-pagination__item c-pagination__item_hidden-mobile">
+												<a href="#" class="c-pagination__link">12</a>
+											</li>
+											<li class="c-pagination__item c-pagination__item_hidden-mobile">
+												<a href="#" class="c-pagination__link">13</a>
+											</li>
+											<li class="c-pagination__item c-pagination__item_last">
+												<a href="#" class="c-pagination__link">14</a>
+											</li>
+										</ul>
 									</div>
-								</div>
-								<div class="contacts__accessibility">
-									<svg class="icon" aria-hidden="true">
-										<use href="./assets/img/spritemap.svg#sprite-accessibility"></use>
-									</svg>
-									<p>Klīnika pieejama cilvēkiem ar kustību traucējumiem</p>
-								</div>
-								<div class="contacts__details requisites">
-									<h4 class="requisites__title mb-1">Rekvizīti</h4>
-									<div class="requisites__body">
-										<p>
-											<strong>SIA JUSKOS</strong>
-										</p>
-										<p>
-											<strong>PVN Reģ. Nr.:</strong>
-											LV40203221507
-										</p>
-										<p>
-											<strong>Jur. adrese:</strong>
-											Madonas 25-100, Rīga, LV-1084
-										</p>
-										<p>
-											<strong>Banka:</strong>
-											A/S Swedbank
-										</p>
-										<p>
-											<strong>Konta numurs:</strong>
-											LV95HABA0551046950090
-										</p>
-										<p>
-											<strong>Saimnieciskās darbības adrese:</strong>
-											Katrīnas iela 9, Rīga, LV-1045
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="contacts__map">
-								<iframe title="Dr. Leitānes JK klīnika map" src="https://maps.google.com/maps?q=Katr%C4%ABnas%20iela%209%2C%20R%C4%ABga%2C%20LV-1045&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="directions" data-fls-directions="" aria-labelledby="directions-title">
-					<div class="directions__container">
-						<h2 id="directions-title" class="directions__title">Kā pie mums nokļūt</h2>
-						<div class="directions__body">
-							<div class="directions__column directions__column_transport">
-								<h3 class="directions__subtitle">Ar sabiedrisko transportu</h3>
-								<div class="directions__routes">
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">7. tramvajs</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">1. autobuss</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">7. tramvajs</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">1. autobuss</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="directions__column directions__column_car">
-								<h3 class="directions__subtitle">Ar mašīnu</h3>
-								<div class="directions__parking">
-									<div class="directions__parking-item">
-										<p class="directions__parking-title">Bezmaksas stāvvieta</p>
-										<p class="directions__parking-text">Mūsu klientiem ir pieejama bezmaksas autostāvvieta</p>
-									</div>
-									<div class="directions__parking-item">
-										<p class="directions__parking-title">Bezmaksas stāvvieta</p>
-										<p class="directions__parking-text">Mūsu klientiem ir pieejama bezmaksas autostāvvieta</p>
-									</div>
-								</div>
+								</nav>
 							</div>
 						</div>
 					</div>

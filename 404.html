@@ -10,13 +10,11 @@
 		<link rel="preload" href="./assets/fonts/DMSans-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="preload" href="./assets/fonts/DMSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
-		<title>Contacts</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1778069547808"></script>
-		<script type="module" crossorigin="" src="./js/popup.min.js?v=1778069547808"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1778069547808">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1778069547808">
-		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1778069547808">
-		<link rel="stylesheet" crossorigin="" href="./css/pageheading.min.css?v=1778069547808">
+		<title>404</title>
+		<script type="module" crossorigin="" src="./js/404.min.js?v=1778069547813"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1778069547813">
+		<link rel="stylesheet" crossorigin="" href="./css/404.min.css?v=1778069547813">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -360,218 +358,25 @@
 					</div>
 				</div>
 			</header>
-			<main class="page page--about">
-				<section class="page-heading" aria-labelledby="page-heading-title" data-fls-pageheading="">
-					<div class="page-heading__container">
-						<div class="page-heading__main">
-							<h1 id="page-heading-title" class="page-heading__title">Kontakti</h1>
-							<a href="index.html" class="page-heading__back">
-								<svg class="icon" aria-hidden="true">
-									<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
-								</svg>
-								<span>Uz sākumlapu</span>
-							</a>
-						</div>
-					</div>
-				</section>
-				<section class="contacts" data-fls-contacts="" aria-labelledby="contacts-title">
-					<div class="contacts__container">
-						<h2 id="contacts-title" class="sr-only">Kontakti</h2>
-						<div class="contacts__body">
-							<div class="contacts__content">
-								<div class="contacts__head _content">
-									<h3 class="contacts__name mb-0">Dr. Leitānes JK klīnika</h3>
-									<p class="contacts__code">Ārstniecības iestādes kods: 001000205</p>
-								</div>
-								<div class="contacts__main">
-									<div class="contacts__info">
-										<div class="contacts__block info-block info-block_location">
-											<div class="info-block__heading">
-												<svg class="icon" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-location"></use>
-												</svg>
-												<p class="info-block__title">Adrese</p>
-											</div>
-											<div class="info-block__body">
-												<p>Katrīnas iela 9, Rīga, LV-1045</p>
-												<a href="#">Skatīt kartē un saņemt norādes</a>
-											</div>
-										</div>
-										<div class="contacts__block info-block info-block_schedule">
-											<div class="info-block__heading">
-												<svg class="icon" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-schedule"></use>
-												</svg>
-												<p class="info-block__title">Darba laiks</p>
-											</div>
-											<div class="info-block__body">
-												<ul class="info-block__list">
-													<li>Pr. – Pk.: 09:00 – 20:00</li>
-													<li>Sestdien.: 09:00 – 17:00</li>
-													<li>Svētdien.: Brīvs</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="contacts__aside">
-										<div class="contacts__contacts contact-list">
-											<div class="contact-list__item">
-												<span class="contact-list__label">Tālrunis</span>
-												<a href="tel:+37120750750" class="contact-list__value">+371 20 750 750</a>
-											</div>
-											<div class="contact-list__item">
-												<span class="contact-list__label">E-pasts</span>
-												<a href="mailto:info@jusudomens.lv" class="contact-list__value">info@jusudomens.lv</a>
-											</div>
-										</div>
-										<div class="contacts__button">
-											<a href="#" class="btn btn_fill-grey">
-												<span>Pieteikt vizīti</span>
-												<svg class="icon icon_chevron" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
-												</svg>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="contacts__accessibility">
-									<svg class="icon" aria-hidden="true">
-										<use href="./assets/img/spritemap.svg#sprite-accessibility"></use>
+			<main class="page page_error">
+				<section class="error404" aria-labelledby="error-page-title" data-fls-error="">
+					<div class="error404__container">
+						<div class="error404__body">
+							<h1 id="error-page-title" class="error404__title">Kļūda! 404</h1>
+							<p class="error404__text">lapa nav atrasta</p>
+							<div class="error404__actions" data-fls-button="">
+								<button type="button" class="error404__button btn btn_small btn_fill-grey" data-fls-404-back="">
+									<svg class="icon error404__icon error404__icon_back" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
 									</svg>
-									<p>Klīnika pieejama cilvēkiem ar kustību traucējumiem</p>
-								</div>
-								<div class="contacts__details requisites">
-									<h4 class="requisites__title mb-1">Rekvizīti</h4>
-									<div class="requisites__body">
-										<p>
-											<strong>SIA JUSKOS</strong>
-										</p>
-										<p>
-											<strong>PVN Reģ. Nr.:</strong>
-											LV40203221507
-										</p>
-										<p>
-											<strong>Jur. adrese:</strong>
-											Madonas 25-100, Rīga, LV-1084
-										</p>
-										<p>
-											<strong>Banka:</strong>
-											A/S Swedbank
-										</p>
-										<p>
-											<strong>Konta numurs:</strong>
-											LV95HABA0551046950090
-										</p>
-										<p>
-											<strong>Saimnieciskās darbības adrese:</strong>
-											Katrīnas iela 9, Rīga, LV-1045
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="contacts__map">
-								<iframe title="Dr. Leitānes JK klīnika map" src="https://maps.google.com/maps?q=Katr%C4%ABnas%20iela%209%2C%20R%C4%ABga%2C%20LV-1045&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="directions" data-fls-directions="" aria-labelledby="directions-title">
-					<div class="directions__container">
-						<h2 id="directions-title" class="directions__title">Kā pie mums nokļūt</h2>
-						<div class="directions__body">
-							<div class="directions__column directions__column_transport">
-								<h3 class="directions__subtitle">Ar sabiedrisko transportu</h3>
-								<div class="directions__routes">
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">7. tramvajs</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">1. autobuss</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">7. tramvajs</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-									<div class="directions__route route-directions">
-										<div class="route-directions__title">1. autobuss</div>
-										<div class="route-directions__items">
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-											<div class="route-directions__item">
-												<span class="route-directions__from">No centra</span>
-												<svg class="icon icon_arrow-right" aria-hidden="true">
-													<use href="./assets/img/spritemap.svg#sprite-arrow"></use>
-												</svg>
-												<span class="route-directions__to">pietura "Katrīnas iela"</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="directions__column directions__column_car">
-								<h3 class="directions__subtitle">Ar mašīnu</h3>
-								<div class="directions__parking">
-									<div class="directions__parking-item">
-										<p class="directions__parking-title">Bezmaksas stāvvieta</p>
-										<p class="directions__parking-text">Mūsu klientiem ir pieejama bezmaksas autostāvvieta</p>
-									</div>
-									<div class="directions__parking-item">
-										<p class="directions__parking-title">Bezmaksas stāvvieta</p>
-										<p class="directions__parking-text">Mūsu klientiem ir pieejama bezmaksas autostāvvieta</p>
-									</div>
-								</div>
+									<span>Atpakaļ</span>
+								</button>
+								<a href="index.html" class="error404__button btn btn_small btn_border-grey">
+									<span>Uz sākuma lapu</span>
+									<svg class="icon error404__icon" aria-hidden="true">
+										<use href="./assets/img/spritemap.svg#sprite-chevron"></use>
+									</svg>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -752,113 +557,6 @@
 					<use href="./assets/img/spritemap.svg#sprite-up"></use>
 				</svg>
 			</button>
-		</div>
-		<div data-fls-popup="appointment" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="appointment-popup-title" class="popup popup_appointment">
-			<div data-fls-popup-wrapper="" class="popup__wrapper">
-				<div data-fls-popup-body="" class="popup__body">
-					<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Aizvērt modālo logu"></button>
-					<div data-fls-popup-content="" class="popup__content appointment-popup">
-						<div class="appointment-popup__header">
-							<h2 id="appointment-popup-title" class="appointment-popup__title">
-								Pieteikt vizīti
-								<span>vai</span>
-								<a href="#">Sākt online čatu</a>
-							</h2>
-						</div>
-						<form action="#" method="post" class="appointment-popup__form">
-							<fieldset class="appointment-popup__section">
-								<legend class="appointment-popup__legend">Pacienta dati (obligāti lauki)</legend>
-								<div class="appointment-popup__grid">
-									<label class="appointment-popup__field">
-										<span class="sr-only">Jūsu vārds</span>
-										<input autocomplete="given-name" type="text" name="name" placeholder="Jūsu vārds" class="input" required>
-									</label>
-									<label class="appointment-popup__field">
-										<span class="sr-only">Jūsu uzvārds</span>
-										<input autocomplete="family-name" type="text" name="surname" placeholder="Jūsu uzvārds" class="input" required>
-									</label>
-									<label class="appointment-popup__field input input_phone">
-										<span class="sr-only">Tālruņa numurs</span>
-										<input data-fls-input-phone="" data-fls-input-phone-country="lv" autocomplete="tel" type="tel" name="phone" placeholder="Tālruņa numurs" required>
-									</label>
-									<label class="appointment-popup__field">
-										<span class="sr-only">Email</span>
-										<input autocomplete="email" type="email" name="email" placeholder="Email" class="input" required>
-									</label>
-								</div>
-							</fieldset>
-							<fieldset class="appointment-popup__section">
-								<legend class="appointment-popup__legend">Izvēlēties pakalpojumu un speciālistu</legend>
-								<div class="appointment-popup__grid">
-									<label class="appointment-popup__field">
-										<span class="sr-only">Norādiet pakalpojumu</span>
-										<select data-fls-select="" name="service" required>
-											<option value="" selected>Norādiet pakalpojumu</option>
-											<option value="dermatologija">Dermatoloģija</option>
-											<option value="estetiska-medicina">Estētiskā medicīna</option>
-											<option value="kosmetologija">Kosmetoloģija</option>
-											<option value="podologija">Podoloģija</option>
-										</select>
-									</label>
-									<label class="appointment-popup__field">
-										<span class="sr-only">Izvēlieties speciālistu</span>
-										<select data-fls-select="" name="specialist">
-											<option value="" selected>Izvēlieties speciālistu</option>
-											<option value="olga-leitane">Dr. Olga Leitāne</option>
-											<option value="marija-stepanova">Marija Stepanova</option>
-											<option value="tamara-sturua">Tamara Sturua</option>
-											<option value="aleksandra-mamonova">Aleksandra Mamonova</option>
-										</select>
-									</label>
-								</div>
-							</fieldset>
-							<fieldset class="appointment-popup__section">
-								<legend class="appointment-popup__legend">Vēlamais datums un laiks</legend>
-								<div class="appointment-popup__grid">
-									<label class="appointment-popup__field appointment-popup__date">
-										<span class="sr-only">Datums</span>
-										<input data-fls-datepicker="" autocomplete="off" type="text" name="date" placeholder="Datums" class="input">
-										<svg class="appointment-popup__date-icon icon" aria-hidden="true">
-											<use href="./assets/img/spritemap.svg#sprite-calendar"></use>
-										</svg>
-									</label>
-									<label class="appointment-popup__field">
-										<span class="sr-only">Laiks</span>
-										<select data-fls-select="" name="time">
-											<option value="" selected>Laiks</option>
-											<option value="09:00">09:00</option>
-											<option value="12:00">12:00</option>
-											<option value="15:00">15:00</option>
-											<option value="18:00">18:00</option>
-										</select>
-									</label>
-								</div>
-							</fieldset>
-							<div class="appointment-popup__section">
-								<label class="appointment-popup__field">
-									<span class="appointment-popup__legend">Komentārs</span>
-									<textarea name="comment" placeholder="Jūsu komentārs" class="input appointment-popup__textarea"></textarea>
-								</label>
-							</div>
-							<label data-fls-checkbox="" class="appointment-popup__agreement checkbox">
-								<input class="checkbox__input" type="checkbox" value="1" name="agreement" required>
-								<span class="checkbox__text">
-									Piekrītu
-									<a href="#">lietošanas noteikumiem</a>
-									un
-									<a href="privacy-policy.html">privātuma politikai</a>
-								</span>
-							</label>
-							<button type="submit" class="appointment-popup__submit btn btn_fill-grey">
-								Nosūtīt
-								<svg class="icon icon_chevron" aria-hidden="true">
-									<use xlink:href="./assets/img/spritemap.svg#sprite-chevron"></use>
-								</svg>
-							</button>
-						</form>
-					</div>
-				</div>
-			</div>
 		</div>
 		<ul id="fls-dev-panel">
 			<li>
