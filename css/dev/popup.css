@@ -575,7 +575,7 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: 169;
-  background-color: rgba(255, 255, 255, 0.82);
+  background-color: rgba(32, 35, 37, 0.62);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
